@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Biostat B Process Monitor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+    <script src="http://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.8/angular-material.min.css"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js"></script>
+    <script type="text/javascript" src="/public/gauge.js"></script>
+    <script type="text/javascript" src="/public/angular-canvas-gauge.js"></script>
+    <script type="text/javascript" src="/public/PercentageGauge.js"></script>
+    <link rel="stylesheet" href="/public/biostat.css"/>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+</head>
+
+<body layout="column">
+<div ng-controller="AppCtrl" ng-app="MyApp" style="width: 100%;" id="appScope">
+    <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1"
+                  md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;" layout="row" layout-align="center center">
+                <p ng-bind="data.time" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>Time</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.temp" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>Temperatura (°C)</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.airflow" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>AirFlow (L/min)</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.ph" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>pH</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile class="gray" md-rowspan="2" md-colspan="2">
+            <md-card style="width: 100%;height: 100%;" layout="row" layout-align="center center">
+                <canvas canvas-gauge
+                        id="myCanvas"
+                        width="{{gauge.width}}"
+                        height="{{gauge.height}}"
+                        data-value="{{data.rotation}}"
+                        data-title="Rotação"
+                        data-min-value="0"
+                        data-max-value="1100"
+                        data-major-ticks="0 100 200 300 400 500 600 700 800 900 1000 1100"
+                        data-minor-ticks="2"
+                        data-stroke-ticks="true"
+                        data-units="rpm"
+                        data-value-format="4.0"
+                        data-glow="true"
+                        data-animation-delay="10"
+                        data-animation-duration="200"
+                        data-animation-fn="bounce"
+                        data-colors-needle="#f00 #00f"
+                        data-highlights="0 100 #eee, 100 650 #ccc, 650 900 #aaa, 900 1100 #eaa"
+                        data-circles-outervisible="true"
+                        data-circles-middlevisible="true"
+                        data-circles-innervisible="true"
+                        data-valuebox-visible="true"
+                        data-valuetext-visible="true"
+                        data-colors-needle-start="rgba(240, 128, 128, 1)"
+                        data-colors-needle-end="rgba(255, 160, 122, .9)"
+                        data-colors-needle-shadowup="rgba(2, 255, 255, 0.2)"
+                        data-colors-needle-shadowdown="rgba(188, 143, 143, 0.45)"
+                        data-colors-needle-circle-outerstart="#f0f0f0"
+                        data-colors-needle-circle-outerend="#ccc"
+                        data-colors-needle-circle-innerstart="#e8e8e8"
+                        data-colors-needle-circle-innerend="#f5f5f5"
+                        data-colors-valuebox-rectstart="#888"
+                        data-colors-valuebox-rectend="#666"
+                        data-colors-valuebox-background="#babab2"
+                        data-colors-valuebox-shadow="rgba(0, 0, 0, 1)"
+                        data-colors-valuetext-foreground="#444"
+                        data-colors-valuetext-shadow="rgba(0, 0, 0, 0.3)"
+                        data-colors-circle-shadow="rgba(0, 0, 0, 0.3)"
+                        data-colors-circle-outerstart="#ddd"
+                        data-colors-circle-outerend="#aaa"
+                        data-colors-circle-middlestart="#eee"
+                        data-colors-circle-middleend="#f0f0f0"
+                        data-colors-circle-innerstart="#fafafa"
+                        data-colors-circle-innerend="#ccc"
+                ></canvas>
+            </md-card>
+        </md-grid-tile>
+
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.level" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>Level (mL)</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.afoam" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>AFOAM (%)</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.subs1t" class="monitors unselectable"></p>
+
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>SUBS 1T</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 100%;"layout="row" layout-align="center center">
+                <p ng-bind="data.subs2t" class="monitors unselectable"></p>
+                <md-grid-tile-footer layout="row" layout-align="center center">
+                    <h3>SUBS 2T</h3>
+                </md-grid-tile-footer>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="subs1" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="subs2" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="acid" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="base" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="gasmx" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-card style="width: 100%;height: 30vh;">
+                <div id="po2" style="width:16%; height: 26%;"></div>
+            </md-card>
+        </md-grid-tile>
+
+    </md-grid-list>
+    <!-- angular.element($0).parent().scope().data -->
+
+</div>
+<script type="text/javascript">
+
+    angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge'])
+
+            .controller('AppCtrl', function ($scope) {
+                $scope.data = {};
+                $scope.data.time = "00:00";
+                $scope.data.temp = 0;
+                $scope.data.rotation = 0;
+                $scope.data.ph = 0;
+                $scope.data.po2 = 0;
+                $scope.data.acid = 0;
+                $scope.data.base = 0;
+                $scope.data.afoam = 0;
+                $scope.data.level = 0;
+                $scope.data.subs1 = 0;
+                $scope.data.subs1t = 0;
+                $scope.data.subs2 = 0;
+                $scope.data.subs2t = 0;
+                $scope.data.gasmx = 0;
+                $scope.data.airflow = 0;
+                $scope.data.flhoeimv = 0;
+
+                $scope.gauge = {
+                    value: 50,
+                    width: 350,
+                    height: 350
+                };
+
+
+            });
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var timeSrc = new EventSource('sendTime');
+        timeSrc.addEventListener('time', function (event) {
+            /*document.getElementById("Test").innerHTML += "\n " + event.data;*/
+            var $scope = $("#appScope").scope();
+            $scope.$apply(function () {
+                $scope.data = eval('(' + event.data + ')');
+            });
+            $('#po2').highcharts().series[0].points[0].update(parseFloat($scope.data.po2));
+            $('#base').highcharts().series[0].points[0].update(parseFloat($scope.data.base));
+            $('#subs1').highcharts().series[0].points[0].update(parseFloat($scope.data.subs1));
+            $('#subs2').highcharts().series[0].points[0].update(parseFloat($scope.data.subs2));
+            $('#acid').highcharts().series[0].points[0].update(parseFloat($scope.data.acid));
+            $('#gasmx').highcharts().series[0].points[0].update(parseFloat($scope.data.gasmx));
+            /* angular.element('#appScope').scope().data = eval('(' + event.data + ')'); */
+        });
+
+
+    }, false);
+
+</script>
+</body>
+</html>

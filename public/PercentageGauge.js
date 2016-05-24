@@ -78,9 +78,9 @@ jQuery(document).ready(function ($) {
             name: 'pO2',
             data: [$scope.data.po2],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'
@@ -106,9 +106,9 @@ jQuery(document).ready(function ($) {
             name: 'Substrate 1',
             data: [$scope.data.subs1],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'
@@ -134,9 +134,9 @@ jQuery(document).ready(function ($) {
             name: 'Substrate 2',
             data: [$scope.data.subs2],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'
@@ -162,9 +162,9 @@ jQuery(document).ready(function ($) {
             name: 'Gas Mixture',
             data: [$scope.data.gasmx],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'
@@ -190,9 +190,9 @@ jQuery(document).ready(function ($) {
             name: 'Acid',
             data: [$scope.data.acid],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'
@@ -218,9 +218,9 @@ jQuery(document).ready(function ($) {
             name: 'Base',
             data: [$scope.data.base],
             dataLabels: {
-                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
-                '<span style="font-size:12px;color:silver">%</span></div>'
+                format: '<div style="text-align:center"><span style="font-size:2em;color:' +
+                ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span>' +
+                '<span style="font-size:12px;color:silver"> %</span></div>'
             },
             tooltip: {
                 valueSuffix: ' %'

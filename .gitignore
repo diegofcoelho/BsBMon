@@ -45,3 +45,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+conf/biostat.db
+conf/biostat.db-journal
+conf/biostat.db
+conf/biostat.db
+*.pyc
+*.pyc

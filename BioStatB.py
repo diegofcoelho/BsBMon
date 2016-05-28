@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # http://www.html5rocks.com/en/tutorials/eventsource/basics/
 # http://neokannon.blogspot.com.br/2011/07/cherrypy-server-sent-events-and-you.html
 # https://nelsonslog.wordpress.com/2012/12/30/playing-with-websockets/
@@ -7,21 +8,41 @@
 # http://stackoverflow.com/questions/3473639/best-way-to-convert-string-to-array-of-object-in-javascript
 # http://www.carlissongaldino.com.br/post/um-tutorial-passo-passo-para-sqlite-em-python
 # http://zetcode.com/db/sqlitepythontutorial/
+
+####################################################################################################
+# http://tools.cherrypy.org/wiki/AuthenticationAndAccessRestrictions
+####################################################################################################
+
 import binascii
 import os.path
 import sqlite3
+import sys
 from multiprocessing import Process
 
 import cherrypy
 import serial
 import serial.tools.list_ports
-import sys
+from cherrypy.lib.static import serve_file
 
 import FakeSerial as Serial
-from cherrypy.lib.static import serve_file
+from auth import AuthController, require
+from auth import member_of
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 db = "conf/biostat.db"
+
+
+class RestrictedArea:
+    # all methods in this controller (and subcontrollers) is
+    # open only to members of the admin group
+
+    _cp_config = {
+        'auth.require': [member_of('admin')]
+    }
+
+    @cherrypy.expose
+    def index(self):
+        return """This is the admin only area."""
 
 
 class WareHouse:
@@ -59,6 +80,21 @@ class WareHouse:
         a = cursor.fetchone()[0]
         conn.close()
         return a  # ou use fetchone()
+
+    @staticmethod
+    def generic(sql):
+        conn, ans = "", ""
+        try:
+            conn = sqlite3.connect(db)
+            cursor = conn.cursor()
+            cursor.execute(sql)
+            conn.commit()
+            ans = cursor.fetchall()
+        except Exception as e:
+            raise e
+        finally:
+            conn.close()
+            return ans
 
 
 class Fake232(object):
@@ -125,10 +161,18 @@ class Rs232(object):
 class Root(object):
     # Our toggle variable.
     wh = WareHouse()
+    auth = AuthController()
+    restricted = RestrictedArea()
+    # global USERS
+    # USERS = {u[0]: u[1] for u in wh.generic("select `user`, `pwd` FROM `users`")}
+
     timeFeedEnabled = True
 
+    @require()
     @cherrypy.expose
     def index(self):
+        cherrypy.session.clear()
+        cherrypy.session.load()
         return serve_file(os.path.join(current_dir, 'BioStatBMD.html'), content_type='text/html')
         # return serve_file(os.path.join(current_dir, 'index.html'), content_type='text/html')
         # serves our index client page.
@@ -169,9 +213,12 @@ def MonitorVars(i):
         return None
 
 
-conf = {'/public': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "public")},
-        '/fonts': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "fonts")}
-        }
+conf = {'/': {
+    'tools.sessions.on': True,
+    'tools.auth.on': True},
+    '/public': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "public")},
+    '/fonts': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "fonts")}
+}
 
 if __name__ == '__main__':
     ####################################################################################################################

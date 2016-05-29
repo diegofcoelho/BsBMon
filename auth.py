@@ -148,7 +148,6 @@ class AuthController(object):
     def get_loginform(username, msg="Enter login information", from_page="/"):
         username = escape(username, True)
         from_page = escape(from_page, True)
-        print(locals())
         return u"""<!DOCTYPE html><html><head> <meta charset="utf-8"> <script src="/public/jquery.min.js"
          type="text/javascript"></script> <script src="/public/material.min.js" type="text/javascript"></script>
          <script src="/public/angular.js" type="text/javascript"></script> <script src="/public/angular-animate.min.js"

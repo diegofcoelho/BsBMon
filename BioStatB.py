@@ -17,6 +17,7 @@ import binascii
 import os.path
 import sqlite3
 import sys
+import webbrowser
 from multiprocessing import Process
 
 import cherrypy
@@ -198,6 +199,13 @@ class Root(object):
         else:
             pass
 
+    @cherrypy.expose
+    def feed(self):
+        cherrypy.response.headers["Content-Type"] = "text/event-stream;charset=utf-8"
+        return "retry: 30000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
+
+    feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
+
 
 def MonitorVars(i):
     res = {}
@@ -243,4 +251,12 @@ if __name__ == '__main__':
         p1.start()
     pageroot = Root()
     # And, standard cherrypy quickstart.
+    url = 'http://127.0.0.1:8080'
+    webbrowser.open(url)
+    '''
+    options = webdriver.ChromeOptions()
+    options.add_argument("--start-maximized")
+    driver = webdriver.Chrome(chrome_options=options)
+    '''
     cherrypy.quickstart(pageroot, config=conf)
+

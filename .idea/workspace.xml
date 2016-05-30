@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5ee96a-bb78-428f-b547-5063830c6ec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/2013826123134_376599_1.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/BB.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/PI-23125-204338-full.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/PI-23137-204338-full.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/biostat-b.mth41649_200_200.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/im.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/s-l1000.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/bg.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/Ah ah ah- You didn't say the magic word... - Imgur.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bg - Copy.svg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/conf/biostat - Copy.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/biostat.db" afterPath="$PROJECT_DIR$/conf/biostat.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatB.py" afterPath="$PROJECT_DIR$/BioStatB.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatBMD.html" afterPath="$PROJECT_DIR$/BioStatBMD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth.py" afterPath="$PROJECT_DIR$/auth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app.css" afterPath="$PROJECT_DIR$/public/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bg.svg" afterPath="$PROJECT_DIR$/public/bg.svg" />
     </list>
     <ignored path="biostat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +23,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464529434512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464535886476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -42,15 +37,15 @@
       <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BioStatB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="259" column="7" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
+            <state relative-caret-position="658">
+              <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
               <folding>
                 <element signature="e#844#859#0" expanded="true" />
-                <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-                <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-                <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-                <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-                <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+                <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+                <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+                <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+                <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+                <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
               </folding>
             </state>
           </provider>
@@ -59,7 +54,7 @@
       <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
+            <state relative-caret-position="2431">
               <caret line="149" column="43" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
               <folding>
                 <element signature="e#114#128#0" expanded="true" />
@@ -85,8 +80,18 @@
       <file leaf-file-name="biostat.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/biostat.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29835">
+              <caret line="1755" column="0" selection-start-line="1755" selection-start-column="0" selection-end-line="1755" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,6 +146,7 @@
         <option value="$PROJECT_DIR$/public/login.html" />
         <option value="$PROJECT_DIR$/BioStatBMD.html" />
         <option value="$PROJECT_DIR$/auth.py" />
+        <option value="$PROJECT_DIR$/public/app.css" />
         <option value="$PROJECT_DIR$/BioStatB.py" />
       </list>
     </option>
@@ -182,8 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -199,6 +205,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BsBMon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BsBMon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BsBMon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,25 +511,25 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26812366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33874458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33874458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -524,26 +544,10 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BioStatB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/rotationGauge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,11 +603,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -612,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,11 +671,11 @@
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -681,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,11 +739,11 @@
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -750,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,11 +807,11 @@
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -819,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -875,11 +875,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -888,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,11 +935,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -949,7 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,11 +995,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>
@@ -1069,14 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/biostat.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/PercentageGauge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1125,7 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,7 +1131,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
+        <state relative-caret-position="2431">
           <caret line="149" column="43" selection-start-line="149" selection-start-column="43" selection-end-line="149" selection-end-column="43" />
           <folding>
             <element signature="e#114#128#0" expanded="true" />
@@ -1151,17 +1140,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/biostat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29835">
+          <caret line="1755" column="0" selection-start-line="1755" selection-start-column="0" selection-end-line="1755" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BioStatB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="259" column="7" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
+        <state relative-caret-position="658">
+          <caret line="251" column="18" selection-start-line="251" selection-start-column="18" selection-end-line="251" selection-end-column="18" />
           <folding>
             <element signature="e#844#859#0" expanded="true" />
-            <marker date="1464529447504" expanded="true" signature="2133:2160" ph="CREATE TABLE... runtime" />
-            <marker date="1464529447504" expanded="true" signature="2181:2214" ph="INSERT INTO runtime... " />
-            <marker date="1464529447504" expanded="true" signature="2441:2471" ph="UPDATE runti... " />
-            <marker date="1464529447504" expanded="true" signature="2670:2691" ph="SELECT * FRO... runtime" />
-            <marker date="1464529447504" expanded="true" signature="5361:5394" ph="select `user... users" />
+            <marker date="1464537530805" expanded="true" signature="2164:2191" ph="CREATE TABLE... runtime" />
+            <marker date="1464537530805" expanded="true" signature="2212:2245" ph="INSERT INTO runtime... " />
+            <marker date="1464537530805" expanded="true" signature="2472:2502" ph="UPDATE runti... " />
+            <marker date="1464537530805" expanded="true" signature="2701:2722" ph="SELECT * FRO... runtime" />
+            <marker date="1464537530805" expanded="true" signature="5392:5425" ph="select `user... users" />
           </folding>
         </state>
       </provider>

@@ -506,16 +506,6 @@ body .ui-tooltip {
     cursor: pointer
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dppx) {
-    .chosen-rtl .chosen-search input[type=text], .chosen-container-single .chosen-single abbr, .chosen-container-single .chosen-single div b, .chosen-container-single .chosen-search input[type=text], .chosen-container-multi .chosen-choices .search-choice .search-choice-close, .chosen-container .chosen-results-scroll-down span, .chosen-container .chosen-results-scroll-up span {
-        background-image: url(../img/chosen-sprite@2x.png) !important;
-        background-size: 52px 37px !important;
-        background-repeat: no-repeat !important
-    }
-}
-
-
-
 .c3 svg {
     font: 10px sans-serif
 }
@@ -1180,10 +1170,6 @@ span.CodeMirror-selectedtext {
     margin-top: 8px
 }
 
-.editor-toolbar:hover, .editor-wrapper input.title:focus, .editor-wrapper input.title:hover {
-    opacity: .8
-}
-
 .editor-toolbar.fullscreen {
     width: 100%;
     height: 50px;
@@ -1703,25 +1689,10 @@ tr.draggable-item-selected td:last-child {
     background: #fefff2
 }
 
-form {
-    margin-bottom: 20px
-}
-
 label {
     cursor: pointer;
     display: block;
     margin-top: 10px
-}
-
-input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, textarea:focus {
-    color: #000;
-    border-color: rgba(82, 168, 236, 0.8);
-    outline: 0;
-    box-shadow: 0 0 8px rgba(82, 168, 236, 0.6)
-}
-
-input.form-numeric, input[type="number"] {
-    width: 70px
 }
 
 textarea {
@@ -1741,16 +1712,6 @@ select:focus {
     outline: 0
 }
 
-::-webkit-input-placeholder {
-    color: #ddd;
-    padding-top: 2px
-}
-
-::-ms-input-placeholder {
-    color: #ddd;
-    padding-top: 2px
-}
-
 ::-moz-placeholder {
     color: #ddd;
     padding-top: 2px
@@ -1761,14 +1722,6 @@ select:focus {
     clear: both
 }
 
-input.form-error, textarea.form-error {
-    border: 2px solid #b94a48
-}
-
-input.form-error:focus, textarea.form-error:focus {
-    box-shadow: none;
-    border: 2px solid #b94a48
-}
 
 .form-required {
     color: red;
@@ -1801,27 +1754,12 @@ ul.form-errors li {
     display: inline
 }
 
-.form-inline input, .form-inline select {
-    margin: 0;
-    margin-right: 15px
-}
-
 .form-inline .form-required {
     display: none
 }
 
 .form-inline-group {
     display: inline
-}
-
-input.form-datetime, input.form-date {
-    width: 150px
-}
-
-input.form-input-large {
-    /* dfcoelho searchbox width */
-    width: 25vw;
-    min-width: 400px;
 }
 
 .form-column {

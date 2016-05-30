@@ -24,6 +24,7 @@ import cherrypy
 import serial
 import serial.tools.list_ports
 from cherrypy.lib.static import serve_file
+from selenium import webdriver
 
 import FakeSerial as Serial
 from auth import AuthController, require
@@ -253,10 +254,6 @@ if __name__ == '__main__':
     # And, standard cherrypy quickstart.
     url = 'http://127.0.0.1:8080'
     webbrowser.open(url)
-    '''
-    options = webdriver.ChromeOptions()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(chrome_options=options)
-    '''
+    #
     cherrypy.quickstart(pageroot, config=conf)
 

@@ -51,3 +51,4 @@ conf/biostat.db
 conf/biostat.db
 *.pyc
 *.pyc
+*.pyc

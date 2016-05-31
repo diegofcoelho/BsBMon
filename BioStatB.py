@@ -8,7 +8,7 @@
 # http://stackoverflow.com/questions/3473639/best-way-to-convert-string-to-array-of-object-in-javascript
 # http://www.carlissongaldino.com.br/post/um-tutorial-passo-passo-para-sqlite-em-python
 # http://zetcode.com/db/sqlitepythontutorial/
-
+# https://github.com/daniel-nagy/md-data-table
 ####################################################################################################
 # http://tools.cherrypy.org/wiki/AuthenticationAndAccessRestrictions
 ####################################################################################################
@@ -24,7 +24,6 @@ import cherrypy
 import serial
 import serial.tools.list_ports
 from cherrypy.lib.static import serve_file
-from selenium import webdriver
 
 import FakeSerial as Serial
 from auth import AuthController, require
@@ -173,8 +172,8 @@ class Root(object):
     @require()
     @cherrypy.expose
     def index(self):
-        cherrypy.session.clear()
-        cherrypy.session.load()
+        # cherrypy.session.clear()
+        # cherrypy.session.load()
         return serve_file(os.path.join(current_dir, 'BioStatBMD.html'), content_type='text/html')
         # return serve_file(os.path.join(current_dir, 'index.html'), content_type='text/html')
         # serves our index client page.
@@ -210,23 +209,34 @@ class Root(object):
 
 def MonitorVars(i):
     res = {}
+    # print(i)
     if i is not None and i != "None":
         if all(s in i for s in ["|", "."]) and "-" not in i:
-            keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
-                    "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow"]  # , "FLHOEIMV"]
-            values = i.replace(" ", "").split("|")
-            for e in keys:
-                res[e] = values[keys.index(e)]
-            return str(res)
+            # print(i)
+            j = i.split("\n")
+            for k in j:
+                if "|" in k:
+                    keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
+                            "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow"]  # , "FLHOEIMV"]
+                    values = i.replace(" ", "").split("|")
+                    for e in keys:
+                        res[e] = values[keys.index(e)]
+                    return str(res)
+                else:
+                    alert_msg = k
+                    print("An alert message was issued: {}".format(alert_msg))
     else:
         return None
 
 
 conf = {'/': {
     'tools.sessions.on': True,
+    'tools.sessions.timeout': 60,
     'tools.auth.on': True},
     '/public': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "public")},
-    '/fonts': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "fonts")}
+    '/fonts': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "fonts")},
+    '/table': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "table")},
+    '/templates': {'tools.staticdir.on': True, 'tools.staticdir.dir': os.path.join(current_dir, "templates")}
 }
 
 if __name__ == '__main__':
@@ -256,4 +266,3 @@ if __name__ == '__main__':
     webbrowser.open(url)
     #
     cherrypy.quickstart(pageroot, config=conf)
-

@@ -3,5 +3,6 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'widget.scrollbar']).contro
             $scope.title4 = 'Warn';
             $scope.isDisabled = true;
             $scope.googleUrl = 'http://google.com';
+            $scope.logger = false;
 
         });

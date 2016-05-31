@@ -22,10 +22,12 @@
     <script type="text/javascript" src="/public/angular-canvas-gauge.js"></script>
     <script type="text/javascript" src="/public/PercentageGauge.js"></script>
     <link rel="stylesheet" href="/public/biostat.css"/>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="/public/highcharts.js"></script>
+    <script src="/public/highcharts-more.js"></script>
+    <script src="/public/modules/solid-gauge.js"></script>
+    <script type="text/javascript" src="public/md-data-table.js"></script>
+    <link href="public/md-data-table.css" rel="stylesheet" type="text/css"/>
+    <link href="public/table.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -34,7 +36,7 @@
 <div ng-controller="AppCtrl" ng-app="MyApp" id="appScope">
     <md-tabs md-dynamic-height="" md-border-bottom="">
         <md-tab label="Monitor de Processo">
-            <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1"
+            <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1.1:1"
                           md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">
                 <md-grid-tile>
                     <md-card style="width: 100%;height: 90%;" layout="row" layout-align="center center">
@@ -118,7 +120,6 @@
                         ></canvas>
                     </md-card>
                 </md-grid-tile>
-
                 <md-grid-tile>
                     <md-card style="width: 100%;height: 90%;" layout="row" layout-align="center center">
                         <p ng-bind="data.level" class="monitors unselectable"></p>
@@ -186,8 +187,16 @@
             </md-grid-list>
         </md-tab>
         <md-tab label="Configurações">
+            <md-card  style="padding: 2%;height: 85vh;">
+                <md-switch ng-model="logger" aria-label="Switch 1">
+                    Gravar Dados: {{ logger }}
+                </md-switch>
+            </md-card>
         </md-tab>
         <md-tab label="Base de dados">
+            <md-content laout="column" flex ng-controller="dataController">
+                <md-card ng-include="'templates/data-table.html'" style="padding: 2%;height: 85vh;"></md-card>
+            </md-content>
         </md-tab>
     </md-tabs>
 
@@ -196,7 +205,15 @@
 </div>
 <script type="text/javascript">
 
-    angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge'])
+    angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md.data.table'])
+
+            .config(['$mdThemingProvider', function ($mdThemingProvider) {
+                'use strict';
+
+                $mdThemingProvider.theme('default')
+                  .primaryPalette('blue')
+                  .accentPalette('pink');
+              }])
 
             .controller('AppCtrl', function ($scope) {
                 $scope.data = {};
@@ -217,14 +234,170 @@
                 $scope.data.airflow = 0;
                 $scope.data.flhoeimv = 0;
 
+                $scope.table = []
+                $scope.tcount = 0
+
                 $scope.gauge = {
                     value: 50,
                     width: 350,
                     height: 350
                 };
+            })
 
+            .controller('dataController', ['$http', '$mdEditDialog', '$q', '$timeout', '$scope', function ($http, $mdEditDialog, $q, $timeout, $scope) {
+              'use strict';
 
-            });
+              $scope.options = {
+                rowSelection: false,
+                multiSelect: false,
+                autoSelect: false,
+                decapitate: false,
+                largeEditDialog: false,
+                boundaryLinks: false,
+                limitSelect: false,
+                pageSelect: false
+              };
+
+              $scope.selected = [];
+              $scope.limitOptions = [5, 10, 15, {
+                label: 'All',
+                value: function () {
+                  return $scope.table ? $scope.table.length : 0;
+                }
+              }];
+
+              $scope.query = {
+                order: 'name',
+                limit: 14,
+                page: 1
+              };
+
+              // for testing ngRepeat
+              $scope.columns = [{
+                name: 'Hora',
+                orderBy: 'name',
+                unit: '(HH:MM)'
+              }, {
+                descendFirst: true,
+                name: 'Type',
+                orderBy: 'type'
+              }, {
+                name: 'Calories',
+                numeric: true,
+                orderBy: 'calories.value'
+              }, {
+                name: 'Fat',
+                numeric: true,
+                orderBy: 'fat.value',
+                unit: 'g'
+              }, /* {
+                name: 'Carbs',
+                numeric: true,
+                orderBy: 'carbs.value',
+                unit: 'g'
+              }, */ {
+                name: 'Protein',
+                numeric: true,
+                orderBy: 'protein.value',
+                trim: true,
+                unit: 'g'
+              }, /* {
+                name: 'Sodium',
+                numeric: true,
+                orderBy: 'sodium.value',
+                unit: 'mg'
+              }, {
+                name: 'Calcium',
+                numeric: true,
+                orderBy: 'calcium.value',
+                unit: '%'
+              }, */ {
+                name: 'Iron',
+                numeric: true,
+                orderBy: 'iron.value',
+                unit: '%'
+              }, {
+                name: 'Comments',
+                orderBy: 'comment'
+              }];
+
+              $http.get('templates/desserts.json').then(function (desserts) {
+                $scope.desserts = desserts.data;
+
+              });
+
+              $scope.editComment = function (event, dessert) {
+                event.stopPropagation();
+
+                var dialog = {
+                  // messages: {
+                  //   test: 'I don\'t like tests!'
+                  // },
+                  modelValue: dessert.comment,
+                  placeholder: 'Add a comment',
+                  save: function (input) {
+                    dessert.comment = input.$modelValue;
+                  },
+                  targetEvent: event,
+                  title: 'Add a comment',
+                  validators: {
+                    'md-maxlength': 30
+                  }
+                };
+
+                var promise = $scope.options.largeEditDialog ? $mdEditDialog.large(dialog) : $mdEditDialog.small(dialog);
+
+                promise.then(function (ctrl) {
+                  var input = ctrl.getInput();
+
+                  input.$viewChangeListeners.push(function () {
+                    input.$setValidity('test', input.$modelValue !== 'test');
+                  });
+                });
+              };
+
+              $scope.toggleLimitOptions = function () {
+                $scope.limitOptions = $scope.limitOptions ? undefined : [5, 10, 15];
+              };
+
+              $scope.getTypes = function () {
+                return ['Candy', 'Ice cream', 'Other', 'Pastry'];
+              };
+
+              $scope.onPaginate = function(page, limit) {
+                console.log('Scope Page: ' + $scope.query.page + ' Scope Limit: ' + $scope.query.limit);
+                console.log('Page: ' + page + ' Limit: ' + limit);
+
+                $scope.promise = $timeout(function () {
+
+                }, 2000);
+              };
+
+              $scope.deselect = function (item) {
+                console.log(item.name, 'was deselected');
+              };
+
+              $scope.log = function (item) {
+                console.log(item.name, 'was selected');
+              };
+
+              $scope.loadStuff = function () {
+                $scope.promise = $timeout(function () {
+
+                }, 2000);
+              };
+
+              $scope.onReorder = function(order) {
+
+                console.log('Scope Order: ' + $scope.query.order);
+                console.log('Order: ' + order);
+
+                $scope.promise = $timeout(function () {
+
+                }, 2000);
+              };
+
+            }]);
 
     document.addEventListener('DOMContentLoaded', function () {
         var timeSrc = new EventSource('feed');
@@ -240,9 +413,10 @@
             $('#subs2').highcharts().series[0].points[0].update(parseFloat($scope.data.subs2));
             $('#acid').highcharts().series[0].points[0].update(parseFloat($scope.data.acid));
             $('#gasmx').highcharts().series[0].points[0].update(parseFloat($scope.data.gasmx));
+            $scope.table.push($scope.data);
+            $scope.tcount = $scope.table.length;
         });
     }, false);
-
 </script>
 </body>
 </html>

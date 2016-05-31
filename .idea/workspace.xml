@@ -2,87 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5ee96a-bb78-428f-b547-5063830c6ec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dataController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/highcharts-more.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/md-data-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/md-data-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/md-data-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/md-data-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/solid-gauge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/desserts.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-aria.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-canvas-gauge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-canvas-gauge.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-material.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-material.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-material.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-messages.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/material.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/md-data-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/md-data-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/md-data-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/md-data-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/scripts/nutritionController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/styles/app.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/app/templates/nutrition-table.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/dist/md-data-table.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/dist/md-data-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/dist/md-data-table.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/dist/md-data-table.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/icons/arrow-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/icons/navigate-before.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/icons/navigate-first.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/icons/navigate-last.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/icons/navigate-next.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/md-data-table.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdBody.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdCell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdColumn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdEditDialog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdFoot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdHead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdRow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdSelect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdTable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdTablePagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/mdTableProgress.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/scripts/virtualPageSelect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-edit-dialog.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-table-pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-table-select.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-table-toolbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-table.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/styles/md-variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/templates/md-table-pagination.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/table/src/templates/md-table-progress.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/data-table.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/desserts.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/biostat.db" afterPath="$PROJECT_DIR$/conf/biostat.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/biostat.iml" afterPath="$PROJECT_DIR$/.idea/biostat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/LABAM.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/LABAM.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatB.py" afterPath="$PROJECT_DIR$/BioStatB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatBMD.html" afterPath="$PROJECT_DIR$/BioStatBMD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/core.js" afterPath="$PROJECT_DIR$/public/core.js" />
     </list>
     <ignored path="biostat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BioStatB.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
@@ -119,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3956">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -155,7 +77,7 @@
       <file leaf-file-name="md-data-table.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/md-data-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="21964">
               <caret line="1292" column="35" selection-start-line="1292" selection-start-column="35" selection-end-line="1292" selection-end-column="35" />
               <folding />
             </state>
@@ -165,7 +87,7 @@
       <file leaf-file-name="data-table.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/data-table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
+            <state relative-caret-position="544">
               <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
               <folding />
             </state>
@@ -185,7 +107,7 @@
       <file leaf-file-name="dataController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/dataController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="2907">
               <caret line="171" column="46" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="46" />
               <folding />
             </state>
@@ -221,8 +143,8 @@
         <option value="$PROJECT_DIR$/public/dataController.js" />
         <option value="$PROJECT_DIR$/public/md-data-table.js" />
         <option value="$PROJECT_DIR$/templates/data-table.html" />
-        <option value="$PROJECT_DIR$/BioStatBMD.html" />
         <option value="$PROJECT_DIR$/BioStatB.py" />
+        <option value="$PROJECT_DIR$/BioStatBMD.html" />
       </list>
     </option>
   </component>
@@ -263,6 +185,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,8 +207,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -486,12 +408,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -503,6 +424,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -581,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -701,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,7 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,55 +750,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="41" column="71" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/scripts/md-data-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="310" column="25" selection-start-line="310" selection-start-column="23" selection-end-line="310" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/scripts/nutritionController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="77" column="26" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/desserts.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/app.js" />
+    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/index.html" />
+    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/scripts/md-data-table.js" />
+    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/scripts/nutritionController.js" />
+    <entry file="file://$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/desserts.json" />
     <entry file="file://$PROJECT_DIR$/public/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="1755" column="0" selection-start-line="1755" selection-start-column="0" selection-end-line="1755" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-64">
           <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,13 +819,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/dataController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
+        <state relative-caret-position="2907">
           <caret line="171" column="46" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="46" />
           <folding />
         </state>
@@ -962,7 +832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/md-data-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="21964">
           <caret line="1292" column="35" selection-start-line="1292" selection-start-column="35" selection-end-line="1292" selection-end-column="35" />
           <folding />
         </state>
@@ -970,16 +840,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/data-table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
+        <state relative-caret-position="544">
           <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BioStatB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="217" column="28" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
+          <folding>
+            <element signature="e#890#905#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3956">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="17">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1003,16 +883,6 @@
             <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BioStatB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="217" column="28" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
-          <folding>
-            <element signature="e#890#905#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -10,7 +10,7 @@
     </thead> -->
     <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
       <tr md-row>
-        <th md-column data-md-order-by="time"><span>Hora</span></th>
+        <th md-column data-md-order-by="stime"><span>Hora</span></th>
         <th md-column data-md-order-by="temp"><span>Temp</span></th>
         <th md-column data-md-numeric data-md-order-by="rotation" data-md-desc><span>Rotação</span></th>
         <th md-column data-md-numeric data-md-order-by="ph"><span>pH</span></th>
@@ -46,7 +46,7 @@
     </thead>
     <tbody md-body>
       <tr md-row md-select="datastream" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" data-ng-repeat="datastream in table | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit">
-        <td md-cell>{{datastream.time}}</td>
+        <td md-cell>{{datastream.stime}}</td>
         <td md-cell>{{datastream.temp}}</td>
         <td md-cell>{{datastream.rotation}}</td>
         <td md-cell>{{datastream.ph}}</td>

@@ -11,6 +11,8 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
     .controller('AppCtrl', function ($scope) {
         $scope.data = {};
         $scope.data.time = "00:00";
+        $scope.data.ftime = Date("2016-06-01T00:00:00.000Z");
+        $scope.data.stime = "Jun 06 2016 - 00:00";
         $scope.data.temp = 0;
         $scope.data.rotation = 0;
         $scope.data.ph = 0;
@@ -68,6 +70,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     id: "mySeries1"
                 }
             ],
+            //axes: {x: {key: "x", type: "date"}}
             axes: {
                 x: {
                     key: "x"
@@ -76,6 +79,25 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         };
 
         $scope.gdata = {
+            BsBdata: [
+                {
+                    val_1:"0",
+                    val_2:"23.6",
+                    val_3:"0.00",
+                    val_4:6.62,
+                    val_5:"0",
+                    val_6:"0",
+                    val_7:"0",
+                    val_8:"0.0",
+                    val_9:"0.0",
+                    val_10:"0",
+                    val_11:"0",
+                    val_12:"0",
+                    val_13:"0.0",
+                    val_14:"8.0",
+                    x: Date("2016-6-1T16:10:00.000Z")
+                }
+            ],
             timed: [
                 {
                     x: "2016-05-01T23:29:24.390Z",
@@ -898,6 +920,27 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
 
     }]);
 
+function serialify(data) {
+    var serie = {
+        x: data.ftime,
+        val_1: data.rotation,
+        val_2: parseFloat(data.temp),
+        val_3: parseFloat(data.airflow),
+        val_4: parseFloat(data.ph),
+        val_5: data.level,
+        val_6: data.afoam,
+        val_7: data.subs1t,
+        val_8: data.subs2t,
+        val_9: parseFloat(data.subs1),
+        val_10: parseFloat(data.subs2),
+        val_11: parseFloat(data.acid),
+        val_12: parseFloat(data.base),
+        val_13: parseFloat(data.gasmx),
+        val_14: parseFloat(data.po2)
+    };
+    return serie;
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     var timeSrc = new EventSource('feed');
     timeSrc.addEventListener('time', function (event) {
@@ -905,6 +948,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var $scope = $("#appScope").scope();
         $scope.$apply(function () {
             $scope.data = eval('(' + event.data + ')');
+            var now = new Date();
+            $scope.data.ftime = now.getUTCFullYear() + "-" + (now.getUTCMonth() + 1) + "-" + now.getUTCDate() +"T" + $scope.data.time + ":00.000Z";
+            //$scope.data.stime =  now.getUTCDate() + "/" + (now.getUTCMonth() + 1) + "/" + now.getUTCFullYear() + " - " + $scope.data.time;
+             $scope.data.stime = now.toString().replace(/.*(\D{3}) (\d{2}) (\d{4}).*/, '$2/$1/$3') + ' - ' + $scope.data.time;
         });
         $('#po2').highcharts().series[0].points[0].update(parseFloat($scope.data.po2));
         $('#base').highcharts().series[0].points[0].update(parseFloat($scope.data.base));
@@ -912,7 +959,10 @@ document.addEventListener('DOMContentLoaded', function () {
         $('#subs2').highcharts().series[0].points[0].update(parseFloat($scope.data.subs2));
         $('#acid').highcharts().series[0].points[0].update(parseFloat($scope.data.acid));
         $('#gasmx').highcharts().series[0].points[0].update(parseFloat($scope.data.gasmx));
+
         $scope.table.push($scope.data);
+        $scope.gdata.BsBdata.push(serialify($scope.data));
+
         $scope.tcount = $scope.table.length;
     });
 }, false);

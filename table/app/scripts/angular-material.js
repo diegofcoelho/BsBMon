@@ -4834,7 +4834,7 @@ function ThemingProvider($mdColorPalette) {
   // Load JS Defined Palettes
   angular.extend(PALETTES, $mdColorPalette);
 
-  // Default theme defined in core.js
+  // Default theme defined in auth.js
 
   ThemingService.$inject = ["$rootScope", "$log"];
   return themingProvider = {

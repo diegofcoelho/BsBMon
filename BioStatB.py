@@ -12,6 +12,12 @@
 ####################################################################################################
 # http://tools.cherrypy.org/wiki/AuthenticationAndAccessRestrictions
 ####################################################################################################
+# http://n3-charts.github.io/line-chart/#/home
+# http://www.ng-newsletter.com/posts/d3-on-angular.html
+# https://github.com/diegofcoelho/angular-chart.js
+# http://jtblin.github.io/angular-chart.js/
+# https://github.com/n3-charts/line-chart/wiki/Options
+####################################################################################################
 
 import binascii
 import os.path

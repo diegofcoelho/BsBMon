@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5ee96a-bb78-428f-b547-5063830c6ec5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/graph.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart-react.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart-react.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/LineChart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/auth.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/d3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/d3.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/biostat.db" afterPath="$PROJECT_DIR$/conf/biostat.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/biostat.iml" afterPath="$PROJECT_DIR$/.idea/biostat.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatB.py" afterPath="$PROJECT_DIR$/BioStatB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatBMD.html" afterPath="$PROJECT_DIR$/BioStatBMD.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth.py" afterPath="$PROJECT_DIR$/auth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular-material.js" afterPath="$PROJECT_DIR$/public/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/core.js" afterPath="$PROJECT_DIR$/public/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.html" afterPath="$PROJECT_DIR$/public/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table/app/scripts/angular-material.js" afterPath="$PROJECT_DIR$/table/app/scripts/angular-material.js" />
     </list>
     <ignored path="biostat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +36,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464535886476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464741794374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -28,87 +47,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BioStatB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="217" column="28" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="89" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
               <folding>
-                <element signature="e#890#905#0" expanded="true" />
+                <element signature="e#1244#1259#0" expanded="true" />
+                <marker date="1464742910520" expanded="true" signature="2533:2560" ph="CREATE TABLE... runtime" />
+                <marker date="1464742910520" expanded="true" signature="2581:2614" ph="INSERT INTO runtime... " />
+                <marker date="1464742910520" expanded="true" signature="2841:2871" ph="UPDATE runti... " />
+                <marker date="1464742910520" expanded="true" signature="3070:3091" ph="SELECT * FRO... runtime" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FakeSerial.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FakeSerial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1156">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graph.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#945#2473#0" expanded="false" />
+                <element signature="e#5544#7736#0" expanded="false" />
+                <element signature="e#7769#10334#0" expanded="false" />
+                <element signature="e#10369#12962#0" expanded="false" />
+                <element signature="e#15462#17761#0" expanded="false" />
+                <element signature="e#17795#27793#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="269" column="30" selection-start-line="269" selection-start-column="30" selection-end-line="269" selection-end-column="30" />
+            <state relative-caret-position="124">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="md-data-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/md-data-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21964">
-              <caret line="1292" column="35" selection-start-line="1292" selection-start-column="35" selection-end-line="1292" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data-table.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/data-table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/table.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/dataController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2907">
-              <caret line="171" column="46" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +134,6 @@
         <option value="$PROJECT_DIR$/public/login.html" />
         <option value="$PROJECT_DIR$/auth.py" />
         <option value="$PROJECT_DIR$/public/app.css" />
-        <option value="$PROJECT_DIR$/public/core.js" />
         <option value="$USER_HOME$/Downloads/md-data-table-master/md-data-table-master/app/index.html" />
         <option value="$PROJECT_DIR$/table/app/app.js" />
         <option value="$PROJECT_DIR$/table/app/app.css" />
@@ -142,8 +142,10 @@
         <option value="$PROJECT_DIR$/public/dataController.js" />
         <option value="$PROJECT_DIR$/public/md-data-table.js" />
         <option value="$PROJECT_DIR$/templates/data-table.html" />
-        <option value="$PROJECT_DIR$/BioStatB.py" />
         <option value="$PROJECT_DIR$/BioStatBMD.html" />
+        <option value="$PROJECT_DIR$/public/core.js" />
+        <option value="$PROJECT_DIR$/graph.html" />
+        <option value="$PROJECT_DIR$/BioStatB.py" />
       </list>
     </option>
   </component>
@@ -156,8 +158,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -184,8 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,6 +206,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,11 +219,77 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\public" />
       <recent name="E:\BsBMon\public" />
     </key>
   </component>
   <component name="RunManager" selected="Python.BioStatB">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="biostat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="biostat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="biostat" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -253,6 +321,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="biostat" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -371,9 +462,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\LABAM\AppData\Local\Programs\Python\Python35-32\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="biostat" />
@@ -404,17 +495,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27083334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480392" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32575756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3474026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2739872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -422,9 +516,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -441,7 +532,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -450,50 +541,14 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BioStatB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding>
-            <element signature="e#890#905#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/rotationGauge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -517,7 +572,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1244#1259#0" expanded="true" />
+            <marker date="1464742910520" expanded="true" signature="2533:2560" ph="CREATE TABLE... runtime" />
+            <marker date="1464742910520" expanded="true" signature="2581:2614" ph="INSERT INTO runtime... " />
+            <marker date="1464742910520" expanded="true" signature="2841:2871" ph="UPDATE runti... " />
+            <marker date="1464742910520" expanded="true" signature="3070:3091" ph="SELECT * FRO... runtime" />
           </folding>
         </state>
       </provider>
@@ -534,28 +593,9 @@
         <state relative-caret-position="731">
           <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -572,7 +612,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1244#1259#0" expanded="true" />
+            <marker date="1464742910520" expanded="true" signature="2533:2560" ph="CREATE TABLE... runtime" />
+            <marker date="1464742910520" expanded="true" signature="2581:2614" ph="INSERT INTO runtime... " />
+            <marker date="1464742910520" expanded="true" signature="2841:2871" ph="UPDATE runti... " />
+            <marker date="1464742910520" expanded="true" signature="3070:3091" ph="SELECT * FRO... runtime" />
           </folding>
         </state>
       </provider>
@@ -589,28 +633,9 @@
         <state relative-caret-position="731">
           <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -627,7 +652,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1244#1259#0" expanded="true" />
+            <marker date="1464742910520" expanded="true" signature="2533:2560" ph="CREATE TABLE... runtime" />
+            <marker date="1464742910520" expanded="true" signature="2581:2614" ph="INSERT INTO runtime... " />
+            <marker date="1464742910520" expanded="true" signature="2841:2871" ph="UPDATE runti... " />
+            <marker date="1464742910520" expanded="true" signature="3070:3091" ph="SELECT * FRO... runtime" />
           </folding>
         </state>
       </provider>
@@ -703,13 +732,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/runpy.py" />
-    <entry file="file://$PROJECT_DIR$/public/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/rotationGauge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -731,24 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FakeSerial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -764,124 +772,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table/app/app.js">
+    <entry file="file://$PROJECT_DIR$/table/app/app.js" />
+    <entry file="file://$PROJECT_DIR$/table/app/index.html" />
+    <entry file="file://$PROJECT_DIR$/table/app/scripts/nutritionController.js" />
+    <entry file="file://$PROJECT_DIR$/table/app/templates/nutrition-table.html" />
+    <entry file="file://$PROJECT_DIR$/table/app/app.css" />
+    <entry file="file://$PROJECT_DIR$/public/md-data-table.css" />
+    <entry file="file://$PROJECT_DIR$/public/table.css" />
+    <entry file="file://$PROJECT_DIR$/templates/desserts.json" />
+    <entry file="file://$PROJECT_DIR$/public/dataController.js" />
+    <entry file="file://$PROJECT_DIR$/public/md-data-table.js" />
+    <entry file="file://$PROJECT_DIR$/templates/data-table.html" />
+    <entry file="file://$PROJECT_DIR$/public/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table/app/scripts/nutritionController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table/app/templates/nutrition-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table/app/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/md-data-table.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="232" column="12" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/table.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/desserts.json">
+    <entry file="file://$PROJECT_DIR$/FakeSerial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dataController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="171" column="46" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="46" />
+        <state relative-caret-position="-1156">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/md-data-table.js">
+    <entry file="file://$PROJECT_DIR$/public/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21964">
-          <caret line="1292" column="35" selection-start-line="1292" selection-start-column="35" selection-end-line="1292" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/data-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BioStatB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="217" column="28" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
+        <state relative-caret-position="205">
+          <caret line="150" column="19" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
           <folding>
-            <element signature="e#890#905#0" expanded="true" />
+            <element signature="e#1093#2149#0" expanded="false" />
+            <element signature="e#2196#4443#0" expanded="false" />
+            <element signature="e#4468#6172#0" expanded="false" />
+            <element signature="e#6197#8194#0" expanded="false" />
+            <element signature="e#8221#10246#0" expanded="false" />
+            <element signature="e#10267#12135#0" expanded="false" />
+            <element signature="e#12162#13941#0" expanded="false" />
+            <element signature="e#13967#21877#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="269" column="30" selection-start-line="269" selection-start-column="30" selection-end-line="269" selection-end-column="30" />
+        <state relative-caret-position="124">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#945#2473#0" expanded="false" />
+            <element signature="e#5544#7736#0" expanded="false" />
+            <element signature="e#7769#10334#0" expanded="false" />
+            <element signature="e#10369#12962#0" expanded="false" />
+            <element signature="e#15462#17761#0" expanded="false" />
+            <element signature="e#17795#27793#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BioStatB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="89" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
+          <folding>
+            <element signature="e#1244#1259#0" expanded="true" />
+            <marker date="1464742910520" expanded="true" signature="2533:2560" ph="CREATE TABLE... runtime" />
+            <marker date="1464742910520" expanded="true" signature="2581:2614" ph="INSERT INTO runtime... " />
+            <marker date="1464742910520" expanded="true" signature="2841:2871" ph="UPDATE runti... " />
+            <marker date="1464742910520" expanded="true" signature="3070:3091" ph="SELECT * FRO... runtime" />
           </folding>
         </state>
       </provider>

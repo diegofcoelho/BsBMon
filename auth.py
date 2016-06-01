@@ -156,7 +156,7 @@ class AuthController(object):
           <script src="/public/angular-messages.min.js"
           type="text/javascript"></script> <script src="/public/angular-material.js" type="text/javascript"></script>
           <script src="/public/ngscrollbar.js" type="text/javascript"></script>
-           <script type="text/javascript" src="/public/core.js">
+           <script type="text/javascript" src="/public/auth.js">
           </script> <link rel="stylesheet" href="/public/angular-material.min.css" media="screen">
           <link rel="stylesheet" href="/public/app.css" media="screen"><title>Login</title>
           </head><body ng-controller="KanCtrl" ng-app="MyApp" layout="column" layout-align="center center">

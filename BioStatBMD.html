@@ -200,6 +200,13 @@
                 <md-switch ng-model="logger" aria-label="Switch 1">
                     Gravar Dados: {{ logger }}
                 </md-switch>
+                <div layout="column" layout-align="center center">
+                    <md-select placeholder="Select the interpolation model." ng-model="interpolation" md-on-open="loadInter()"
+                               style="min-width: 200px;">
+                        <md-option ng-value="interpolation" ng-repeat="interpolation in interpolations">{{interpolation.model}}</md-option>
+                    </md-select>
+                    <p class="md-caption">You have assigned the task to: {{ interpolation ? interpolation.model : 'No one yet' }}</p>
+                </div>
             </md-card>
         </md-tab>
         <md-tab label="Planilha de dados">

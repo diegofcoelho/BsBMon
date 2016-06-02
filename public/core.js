@@ -9,6 +9,13 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
     }])
 
     .controller('AppCtrl', function ($timeout, $scope) {
+
+        $scope.show = {};
+        $scope.show.graph1 = false;
+        $scope.show.graph2 = false;
+        $scope.show.graph3 = false;
+        $scope.show.graph4 = false;
+
         $scope.data = {};
         $scope.data.time = "00:00";
         $scope.data.ftime = new Date();
@@ -40,6 +47,14 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             height: 350
         };
 
+        $scope.interpolations = [
+                        {id: 1, model: 'bundle'},
+                        {id: 2, model: 'linear'},
+                        {id: 3, model: 'cardinal'},
+                        {id: 4, model: 'monotone'},
+                        {id: 5, model: 'step'}
+                    ];
+/*
         $scope.loadInter = function () {
 
             // Use timeout to simulate a 650ms request.
@@ -55,8 +70,41 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
 
             }, 650);
         };
-
-        $scope.options = {
+*/
+        $scope.graph_options_1 = {
+            margin: {
+                top: 25,
+                bottom: 25
+            },
+            series: [
+                {
+                    axis: "y",
+                    dataset: "BsBdata",
+                    key: "val_1",
+                    label: "Rotação",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(0,100%,50%, 0.8)",
+                    type: ["line"],
+                    id: "RotSeries"
+                },
+                {
+                    axis: "y2",
+                    dataset: "BsBdata",
+                    key: "val_5",
+                    label: "Nível",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(0,100%,50%, 0.8)",
+                    type: ["line"],
+                    id: "LevelSeries"
+                }
+            ],
+            axes: {x: {key: "x", type: "date"}}
+        };
+        $scope.graph_options_2 = {
             margin: {
                 top: 25,
                 bottom: 25
@@ -74,8 +122,41 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                 {
                     axis: "y",
                     dataset: "BsBdata",
-                    key: "val_1",
+                    key: "val_2",
                     label: "Temperatura",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(0,100%,50%, 0.8)",
+                    type: ["line"],
+                    id: "mySeries2"
+                },
+                {
+                    axis: "y2",
+                    dataset: "BsBdata",
+                    key: "val_4",
+                    label: "pH",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(88, 48%, 48%, 1)",
+                    type: ["line"],
+                    id: "mySeries1"
+                }
+            ],
+            axes: {x: {key: "x", type: "date"}}
+        };
+        $scope.graph_options_3 = {
+            margin: {
+                top: 25,
+                bottom: 25
+            },
+            series: [
+                {
+                    axis: "y",
+                    dataset: "BsBdata",
+                    key: "val_7",
+                    label: "Subs1T",
                     interpolation: {
                         mode: "monotone"
                     },
@@ -86,8 +167,8 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                 {
                     axis: "y",
                     dataset: "BsBdata",
-                    key: "val_4",
-                    label: "pH",
+                    key: "val_8",
+                    label: "Subs2T",
                     interpolation: {
                         mode: "monotone"
                     },
@@ -98,6 +179,27 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                 {
                     axis: "y2",
                     dataset: "BsBdata",
+                    key: "val_3",
+                    label: "Vazão de Ar",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(88, 48%, 48%, 1)",
+                    type: ["line"],
+                    id: "airflow"
+                }
+            ],
+            axes: {x: {key: "x", type: "date"}}
+        };
+        $scope.graph_options_4 = {
+            margin: {
+                top: 25,
+                bottom: 25
+            },
+            series: [
+                {
+                    axis: "y",
+                    dataset: "BsBdata",
                     key: "val_9",
                     label: "Substrate 1",
                     interpolation: {
@@ -105,10 +207,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries9"
+                    id: "subs1"
                 },
                 {
-                    axis: "y2",
+                    axis: "y",
                     dataset: "BsBdata",
                     key: "val_10",
                     label: "Substrate 2",
@@ -117,10 +219,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries10"
+                    id: "subs2"
                 },
                 {
-                    axis: "y2",
+                    axis: "y",
                     dataset: "BsBdata",
                     key: "val_11",
                     label: "Acid",
@@ -129,10 +231,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries11"
+                    id: "acid"
                 },
                 {
-                    axis: "y2",
+                    axis: "y",
                     dataset: "BsBdata",
                     key: "val_12",
                     label: "Base",
@@ -141,10 +243,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries12"
+                    id: "base"
                 },
                 {
-                    axis: "y2",
+                    axis: "y",
                     dataset: "BsBdata",
                     key: "val_13",
                     label: "Gas Mixture",
@@ -153,10 +255,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries13"
+                    id: "gasmx"
                 },
                 {
-                    axis: "y2",
+                    axis: "y",
                     dataset: "BsBdata",
                     key: "val_14",
                     label: "pO2",
@@ -165,11 +267,25 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
-                    id: "mySeries14"
+                    id: "pO2"
+                },
+                {
+                    axis: "y",
+                    dataset: "BsBdata",
+                    key: "val_5",
+                    label: "AFoam",
+                    interpolation: {
+                        mode: "monotone"
+                    },
+                    color: "hsla(240,100%,25%, 0.8)",
+                    type: ["line"],
+                    id: "aFoam"
                 }
             ],
             axes: {x: {key: "x", type: "date"}}
         };
+
+
 
         $scope.gdata = {
             BsBdata: [

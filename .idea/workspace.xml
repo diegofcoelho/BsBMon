@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fb5ee96a-bb78-428f-b547-5063830c6ec5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/biostat.db" afterPath="$PROJECT_DIR$/conf/biostat.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/biostat.iml" afterPath="$PROJECT_DIR$/.idea/biostat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatBMD.html" afterPath="$PROJECT_DIR$/BioStatBMD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app.css" afterPath="$PROJECT_DIR$/public/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/core.js" afterPath="$PROJECT_DIR$/public/core.js" />
     </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464825762743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1464913001553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,7 +30,7 @@
       <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BioStatB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="1411">
               <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
               <folding />
             </state>
@@ -73,38 +70,26 @@
       <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+            <state relative-caret-position="598">
+              <caret line="253" column="35" selection-start-line="253" selection-start-column="35" selection-end-line="253" selection-end-column="35" />
               <folding>
-                <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#md-grid-list#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#md-switch#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#md-select#0;n#md-input-container#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -115,8 +100,8 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="1760" column="0" selection-start-line="1760" selection-start-column="0" selection-end-line="1760" selection-end-column="12" />
+            <state relative-caret-position="30056">
+              <caret line="1768" column="0" selection-start-line="1767" selection-start-column="0" selection-end-line="1767" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -125,7 +110,7 @@
       <file leaf-file-name="data-table.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/data-table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-341">
+            <state relative-caret-position="204">
               <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
               <folding />
             </state>
@@ -135,29 +120,9 @@
       <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-                <element signature="e#0#16091#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="1768">
+              <caret line="104" column="2" selection-start-line="104" selection-start-column="2" selection-end-line="104" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,8 +182,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -246,7 +211,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,6 +259,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,7 +426,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\LABAM\AppData\Local\Programs\Python\Python35-32\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\dfcoelho\AppData\Local\Programs\Python\Python35-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -494,29 +459,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2797619" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2889126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32352942" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496732" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3225108" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3495671" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -568,35 +533,23 @@
         <state relative-caret-position="731">
           <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-grid-list#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-switch#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-select#0;n#md-input-container#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -630,35 +583,23 @@
         <state relative-caret-position="731">
           <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-grid-list#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-switch#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-select#0;n#md-input-container#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -834,7 +775,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BioStatB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="1411">
           <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
           <folding />
         </state>
@@ -842,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/data-table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-341">
+        <state relative-caret-position="204">
           <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
           <folding />
         </state>
@@ -850,8 +791,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="1760" column="0" selection-start-line="1760" selection-start-column="0" selection-end-line="1760" selection-end-column="12" />
+        <state relative-caret-position="30056">
+          <caret line="1768" column="0" selection-start-line="1767" selection-start-column="0" selection-end-line="1767" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -866,66 +807,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-            <element signature="e#0#16091#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1768">
+          <caret line="104" column="2" selection-start-line="104" selection-start-column="2" selection-end-line="104" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BioStatBMD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+        <state relative-caret-position="598">
+          <caret line="253" column="35" selection-start-line="253" selection-start-column="35" selection-end-line="253" selection-end-column="35" />
           <folding>
-            <element signature="n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#2;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#3;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#4;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#5;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#6;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#7;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#8;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#9;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#10;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#11;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#12;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#13;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#14;n#md-grid-list#0;n#md-tab#0;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#md-grid-list#0;n#md-card#0;n#md-tab#1;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#md-input-container#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-switch#0;n#div#1;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#md-select#0;n#md-input-container#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-card-title#0;n#md-card#0;n#md-grid-tile#1;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#md-card#0;n#md-content#0;n#md-tab#3;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

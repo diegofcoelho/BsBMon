@@ -1,5 +1,3 @@
-__pycache__/
-__pycache__
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -47,8 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-conf/biostat.db
-conf/biostat.db-journal
 *.pyc
 *.db
-*.pyc
+*.db-journal
+*.db

@@ -97,7 +97,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(0,100%,50%, 0.8)",
+                    color: "hsla(204, 100%, 50%, 1)",
                     type: ["line"],
                     id: "LevelSeries"
                 }
@@ -184,7 +184,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(88, 48%, 48%, 1)",
+                    color: "hsla(204, 100%, 50%, 1)",
                     type: ["line"],
                     id: "airflow"
                 }
@@ -205,7 +205,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(0,100%,50%, 0.8)",
                     type: ["line"],
                     id: "subs1"
                 },
@@ -217,7 +217,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
                     id: "subs2"
                 },
@@ -229,7 +229,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(204, 100%, 50%, 1)",
                     type: ["line"],
                     id: "acid"
                 },
@@ -241,7 +241,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(275, 100%, 50%, 1)",
                     type: ["line"],
                     id: "base"
                 },
@@ -253,7 +253,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(29, 100%, 50%, 1)",
                     type: ["line"],
                     id: "gasmx"
                 },
@@ -265,7 +265,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(240,100%,25%, 0.8)",
+                    color: "hsla(50, 100%, 50%, 1)",
                     type: ["line"],
                     id: "pO2"
                 },

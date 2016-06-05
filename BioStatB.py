@@ -208,7 +208,7 @@ class Root(object):
     @cherrypy.expose
     def feed(self):
         cherrypy.response.headers["Content-Type"] = "text/event-stream;charset=utf-8"
-        return "retry: 30000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
+        return "retry: 60000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
 
     feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
 

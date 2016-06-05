@@ -54,23 +54,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                         {id: 4, model: 'monotone'},
                         {id: 5, model: 'step'}
                     ];
-/*
-        $scope.loadInter = function () {
 
-            // Use timeout to simulate a 650ms request.
-            return $timeout(function () {
-
-                $scope.interpolations = $scope.interpolations || [
-                        {id: 1, model: 'bundle'},
-                        {id: 2, model: 'linear'},
-                        {id: 3, model: 'cardinal'},
-                        {id: 4, model: 'monotone'},
-                        {id: 5, model: 'step'}
-                    ];
-
-            }, 650);
-        };
-*/
         $scope.graph_options_1 = {
             margin: {
                 top: 25,
@@ -97,7 +81,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     interpolation: {
                         mode: "monotone"
                     },
-                    color: "hsla(204, 100%, 50%, 1)",
+                    color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
                     id: "LevelSeries"
                 }

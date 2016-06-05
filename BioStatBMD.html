@@ -215,30 +215,27 @@
                 <md-grid-list md-cols-xs="2" md-cols-sm="2" md-cols-md="2" md-cols-gt-md="4" md-row-height-gt-md="1.2:1"
                               md-row-height="1:1" md-gutter="2vh" md-gutter-gt-sm="2vh">
                     <md-grid-tile>
-                        <md-card style="height:100%; width: 100%; padding: 5%;">
-                            <md-card-title style="padding-left: 1%;padding-top: 1%;">
-                                <md-card-title-text>
-                                    <span class="md-headline">Experiment's Details</span>
-                                    <!-- <span class="md-subhead">Large</span> -->
-                                </md-card-title-text>
-                            </md-card-title>
-                            <div layout-gt-sm="row">
-                                <md-input-container class="md-block" style="margin: 0 0 5% 0;">
-                                    <label>User ID</label>
-                                    <input required="" name="userID" ng-model="project.user" title="">
-                                    <div ng-messages="project.user.$error">
-                                        <div ng-message="required">This is required.</div>
-                                    </div>
-                                </md-input-container>
-                                <md-input-container class="md-block" style="margin: 0 0 5% 0;">
-                                    <label>Series ID</label>
-                                    <input required="" name="seriesID" ng-model="project.series">
-                                    <div ng-messages="project.series.$error">
-                                        <div ng-message="required">This is required.</div>
-                                    </div>
-                                </md-input-container>
-                            </div>
-                            <div>
+                        <md-card style="height:100%; width: 100%; padding: 5%;" layout="column"
+                                 layout-align="space-between space-between">
+                            <span class="md-headline">Experiment's Details</span>
+                            <div style="height: 80%;" layout="column"
+                                 layout-align="center space-between">
+                                <div layout-gt-sm="row">
+                                    <md-input-container class="md-block" style="margin: 0 0 5% 0;">
+                                        <label>User ID</label>
+                                        <input required="" name="userID" ng-model="project.user" title="">
+                                        <div ng-messages="project.user.$error">
+                                            <div ng-message="required">This is required.</div>
+                                        </div>
+                                    </md-input-container>
+                                    <md-input-container class="md-block" style="margin: 0 0 5% 0;">
+                                        <label>Series ID</label>
+                                        <input required="" name="seriesID" ng-model="project.series">
+                                        <div ng-messages="project.series.$error">
+                                            <div ng-message="required">This is required.</div>
+                                        </div>
+                                    </md-input-container>
+                                </div>
                                 <md-input-container class="md-block" style="margin: 0 5% 0 0;">
                                     <label>Project ID</label>
                                     <input required="" name="projectID" ng-model="project.id" title="">
@@ -246,6 +243,7 @@
                                         <div ng-message="required">This is required.</div>
                                     </div>
                                 </md-input-container>
+                                <br>
                                 <md-switch ng-model="logger" aria-label="Switch 1" style="margin: 0 5% 0 0;">
                                     Gravar Dados: {{ logger }}
                                 </md-switch>

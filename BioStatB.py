@@ -138,7 +138,7 @@ class Rs232(object):
         # Show available ports
         print(ports)
         # Choose Port to be used
-        port = ports[0]  # single/first serial port
+        port = 'COM4'  # single/first serial port
         # Open ports
         ser = serial.Serial(port,
                             stopbits=serial.STOPBITS_ONE,
@@ -175,7 +175,7 @@ class Root(object):
 
     timeFeedEnabled = True
 
-    @require()
+    #@require()
     @cherrypy.expose
     def index(self):
         # cherrypy.session.clear()
@@ -225,6 +225,7 @@ def MonitorVars(i):
                     keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
                             "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow"]  # , "FLHOEIMV"]
                     values = i.replace(" ", "").split("|")
+                    print(values, len(values))
                     for e in keys:
                         res[e] = values[keys.index(e)]
                     return str(res)

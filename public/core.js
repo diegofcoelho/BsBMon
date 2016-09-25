@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md.data.table', 'n3-line-chart'])
+angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md.data.table', 'n3-line-chart', 'ngRoute'])
 
     .config(['$mdThemingProvider', function ($mdThemingProvider) {
         'use strict';
@@ -8,13 +8,105 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             .accentPalette('pink');
     }])
 
-    .controller('AppCtrl', function ($timeout, $scope) {
 
+    .controller('AppCtrl', function ($timeout, $scope, $mdToast, $mdDialog) {
+
+        var last = {
+            bottom: false,
+            top: true,
+            left: false,
+            right: true
+        };
+
+        $scope.toastPosition = angular.extend({}, last);
+
+        $scope.getToastPosition = function () {
+            sanitizePosition();
+
+            return Object.keys($scope.toastPosition)
+                .filter(function (pos) {
+                    return $scope.toastPosition[pos];
+                })
+                .join(' ');
+        };
+
+        function sanitizePosition() {
+            var current = $scope.toastPosition;
+
+            if (current.bottom && last.top) current.top = false;
+            if (current.top && last.bottom) current.bottom = false;
+            if (current.right && last.left) current.left = false;
+            if (current.left && last.right) current.right = false;
+
+            last = angular.extend({}, current);
+        }
+
+        $scope.showToast = function (msg) {
+            // https://material.angularjs.org/latest/demo/toast
+            // http://www.tutorialspoint.com/angular_material/angular_material_toasts.htm
+            var pinTo = $scope.getToastPosition();
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent(msg)
+                    .hideDelay(3000)
+                    .position(pinTo)
+            );
+        };
         $scope.show = {};
         $scope.show.graph1 = false;
         $scope.show.graph2 = false;
         $scope.show.graph3 = false;
         $scope.show.graph4 = false;
+
+        $scope.showAlert = function (ev, titlemsg, textmsg) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            // Modal dialogs should fully cover application
+            // to prevent interaction outside of dialog
+            $mdDialog.show(
+                $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('#popupContainer')))
+                    .clickOutsideToClose(true)
+                    .title(titlemsg)
+                    .textContent(textmsg)
+                    .ariaLabel('Task Alert Dialog')
+                    .ok('Ok')
+                    .targetEvent(ev)
+            );
+        };
+
+        $scope.server = {};
+        $scope.server.logger = false;
+        $scope.server.project = {};
+        $scope.server.project.id = 'Project MicroAlgae';
+        $scope.server.project.series = 'Series 1';
+        $scope.server.project.user = 'dfcoelho';
+        // http://stackoverflow.com/questions/21574472/angularjs-cant-access-form-object-in-controller-scope
+        $scope.trigger = function () {
+            var pckg = $scope.server;
+
+            if ($scope.server.logger) {
+                $scope.table = [$scope.data];
+                $scope.gdata.BsBdata = [];
+                $scope.gdata.BsBdata.push(serialify($scope.data));
+                $scope.showToast("BsBMonitor is now recording data from the device.");
+                $scope.selectedIndex = 1;
+                //$scope.showAlert(null, "re", "BsBMonitor is now recording data from the device.");
+            } else {
+                $scope.showToast("BsBMonitor is now on Monitor Mode.");
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/log",
+                data: JSON.stringify(pckg),
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function () {
+                    console.log(pckg);
+                }
+            });
+        };
+
 
         $scope.data = {};
         $scope.data.time = "00:00";
@@ -40,6 +132,14 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         $scope.tcount = 0;
         $scope.interpolations = null;
         $scope.interpolation = null;
+        $scope.config = {};
+        $scope.config.interpolation = {};
+        $scope.config.interpolation.g1 = 'bundle';
+        $scope.config.interpolation.g2 = 'bundle';
+        $scope.config.interpolation.g3 = 'bundle';
+        $scope.config.interpolation.g4 = 'bundle';
+
+        // to ignore sidenav closed state on page load
 
         $scope.gauge = {
             value: 50,
@@ -48,12 +148,12 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         };
 
         $scope.interpolations = [
-                        {id: 1, model: 'bundle'},
-                        {id: 2, model: 'linear'},
-                        {id: 3, model: 'cardinal'},
-                        {id: 4, model: 'monotone'},
-                        {id: 5, model: 'step'}
-                    ];
+            {id: 1, model: 'bundle'},
+            {id: 2, model: 'linear'},
+            {id: 3, model: 'cardinal'},
+            {id: 4, model: 'monotone'},
+            {id: 5, model: 'step'}
+        ];
 
         $scope.graph_options_1 = {
             margin: {
@@ -67,7 +167,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_1",
                     label: "Rotação",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g1
                     },
                     color: "hsla(0,100%,50%, 0.8)",
                     type: ["line"],
@@ -79,7 +179,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_5",
                     label: "Nível",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g1
                     },
                     color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
@@ -109,7 +209,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_2",
                     label: "Temperatura",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g2
                     },
                     color: "hsla(0,100%,50%, 0.8)",
                     type: ["line"],
@@ -121,7 +221,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_4",
                     label: "pH",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g2
                     },
                     color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
@@ -142,7 +242,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_7",
                     label: "Subs1T",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g3
                     },
                     color: "hsla(0,100%,50%, 0.8)",
                     type: ["line"],
@@ -154,7 +254,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_8",
                     label: "Subs2T",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g3
                     },
                     color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
@@ -166,7 +266,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_3",
                     label: "Vazão de Ar",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g3
                     },
                     color: "hsla(204, 100%, 50%, 1)",
                     type: ["line"],
@@ -187,7 +287,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_9",
                     label: "Substrate 1",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(0,100%,50%, 0.8)",
                     type: ["line"],
@@ -199,7 +299,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_10",
                     label: "Substrate 2",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(88, 48%, 48%, 1)",
                     type: ["line"],
@@ -211,7 +311,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_11",
                     label: "Acid",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(204, 100%, 50%, 1)",
                     type: ["line"],
@@ -223,7 +323,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_12",
                     label: "Base",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(275, 100%, 50%, 1)",
                     type: ["line"],
@@ -235,7 +335,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_13",
                     label: "Gas Mixture",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(29, 100%, 50%, 1)",
                     type: ["line"],
@@ -247,7 +347,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_14",
                     label: "pO2",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(50, 100%, 50%, 1)",
                     type: ["line"],
@@ -259,7 +359,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_5",
                     label: "AFoam",
                     interpolation: {
-                        mode: "monotone"
+                        mode: $scope.config.interpolation.g4
                     },
                     color: "hsla(240,100%,25%, 0.8)",
                     type: ["line"],
@@ -269,7 +369,20 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             axes: {x: {key: "x", type: "date"}}
         };
 
+        $scope.doIt = function () {
+            //noinspection JSUnusedLocalSymbols,JSUnusedLocalSymbols
+            function GraphOptions(element, index, array) {
+                element.interpolation.mode = String(this);
+                //console.log("a[" + index + "] = " + element + this);
+            }
 
+            $scope.graph_options_1.series.forEach(GraphOptions, $scope.config.interpolation.g1);
+            $scope.graph_options_2.series.forEach(GraphOptions, $scope.config.interpolation.g2);
+            $scope.graph_options_3.series.forEach(GraphOptions, $scope.config.interpolation.g3);
+            $scope.graph_options_4.series.forEach(GraphOptions, $scope.config.interpolation.g4);
+            $scope.selectedIndex = 1;
+            $scope.showToast("Interpolation Model updated.");
+        };
 
         $scope.gdata = {
             BsBdata: [
@@ -294,7 +407,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         };
     })
 
-    .controller('dataController', ['$http', '$mdEditDialog', '$q', '$timeout', '$scope', function ($http, $mdEditDialog, $q, $timeout, $scope) {
+    .controller('dataController', ['$http', '$mdEditDialog', '$mdDialog', '$q', '$timeout', '$scope', function ($http, $mdEditDialog, $q, $timeout, $mdDialog, $scope) {
         'use strict';
 
         $scope.options = {

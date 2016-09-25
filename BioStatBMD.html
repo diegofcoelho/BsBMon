@@ -8,12 +8,12 @@
     <meta name="viewport" content="initial-scale=1"/>
     <script src="/public/jquery.min.js" type="text/javascript"></script>
     <script src="/public/material.min.js"></script>
-    <script src="/public/angular.js"></script>
+    <script src="/public/angular.min.js"></script>
     <script src="/public/angular-animate.min.js"></script>
-    <script src="/public/angular-route.min.js"></script>
     <script src="/public/angular-aria.min.js"></script>
-    <script src="/public/angular-messages.min.js"></script>
     <script src="/public/angular-material.js"></script>
+    <script src="/public/angular-route.min.js"></script>
+    <script src="/public/angular-messages.min.js"></script>
     <script type="text/javascript" src="/public/gauge.js"></script>
     <script type="text/javascript" src="/public/angular-canvas-gauge.js"></script>
     <script type="text/javascript" src="/public/PercentageGauge.js"></script>
@@ -22,7 +22,6 @@
     <script src="/public/solid-gauge.js"></script>
     <script type="text/javascript" src="/public/md-data-table.js"></script>
     <script type="text/javascript" src="/public/core.js"></script>
-    <script src="public/angular.min.js"></script>
     <script src="public/d3.min.js"></script>
     <script src="public/LineChart.js"></script>
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
@@ -35,10 +34,15 @@
     <link rel="stylesheet" href="/public/LineChart.css">
 </head>
 
-<body layout="column">
+<body layout="column" ng-app="MyApp">
 <!-- <body layout="column" style="width: 95%; height: 95%; top: 2%; left: 2%;"> -->
-<div ng-controller="AppCtrl" ng-app="MyApp" id="appScope">
-    <md-tabs md-dynamic-height="" md-border-bottom="">
+<div id="appScope" ng-controller="AppCtrl">
+    <!--
+    <div class="md-padding dialogdemoBasicUsage" id="popupContainer" ng-cloak=""
+         ng-init="dialog.show = true; dialog.msg='oi'; dialog.text='oi'">
+    </div>
+    -->
+    <md-tabs md-dynamic-height="" md-border-bottom="" md-selected="selectedIndex">
         <md-tab label="Dashboard">
             <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1.15:1"
                           md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">
@@ -190,7 +194,7 @@
 
             </md-grid-list>
         </md-tab>
-        <md-tab label="Monitoramento Online" layout="column">
+        <md-tab label="Monitoramento Online" layout="column" id="MonTab">
             <md-card style="margin: 1%;padding: 1%;height: 85vh; overflow: auto;">
                 <md-grid-list md-cols-xs="2" md-cols-sm="1" md-cols-md="1" md-cols-gt-md="2" md-row-height-gt-md="2.6:1"
                               md-row-height-gt-xs="2.5:1"
@@ -217,50 +221,56 @@
                     <md-grid-tile>
                         <md-card style="height:100%; width: 100%; padding: 5%;" layout="column"
                                  layout-align="space-between space-between">
-                            <span class="md-headline">Experiment's Details</span>
-                            <div style="height: 80%;" layout="column"
+                            <span class="md-headline">Info. do Experimento</span>
+                            <div style="height: 80%;" layout="column" id="swd"
                                  layout-align="center space-between">
                                 <div layout-gt-sm="row">
                                     <md-input-container class="md-block" style="margin: 0 0 5% 0;">
                                         <label>User ID</label>
-                                        <input required="" name="userID" ng-model="project.user" title="">
-                                        <div ng-messages="project.user.$error">
+                                        <input required="" name="userID" ng-model="server.project.user" title=""
+                                               disabled>
+                                        <div ng-messages="server.project.user.$error">
                                             <div ng-message="required">This is required.</div>
                                         </div>
                                     </md-input-container>
                                     <md-input-container class="md-block" style="margin: 0 0 5% 0;">
                                         <label>Series ID</label>
-                                        <input required="" name="seriesID" ng-model="project.series">
-                                        <div ng-messages="project.series.$error">
+                                        <input required="" name="seriesID" ng-model="server.project.series" title=""
+                                               disabled>
+                                        <div ng-messages="server.project.series.$error">
                                             <div ng-message="required">This is required.</div>
                                         </div>
                                     </md-input-container>
                                 </div>
                                 <md-input-container class="md-block" style="margin: 0 5% 0 0;">
                                     <label>Project ID</label>
-                                    <input required="" name="projectID" ng-model="project.id" title="">
-                                    <div ng-messages="project.id.$error">
+                                    <input required="" name="projectID" ng-model="server.project.id" title="">
+                                    <div ng-messages="server.project.id.$error">
                                         <div ng-message="required">This is required.</div>
                                     </div>
                                 </md-input-container>
                                 <br>
-                                <md-switch ng-model="logger" aria-label="Switch 1" style="margin: 0 5% 0 0;">
-                                    Gravar Dados: {{ logger }}
+                                <md-switch
+                                        ng-disabled="server.project.id == undefined || server.project.user == undefined || server.project.series == undefined"
+                                        ng-model='server.logger' aria-label="Switch 1" style="margin: 0 5% 0 0;"
+                                        ng-change="trigger()">
+                                    Gravar dados
                                 </md-switch>
                             </div>
                         </md-card>
                     </md-grid-tile>
-                    <md-grid-tile>
-                        <md-card style="height:100%; width: 100%; padding: 5%;">
-                            <md-card-title style="padding-left: 1%;padding-top: 1%;">
+                    <md-grid-tile md-rowspan="1" md-colspan="1">
+                        <md-card layout="column" layout-align="space-between end"
+                                 style="height:100%; width: 100%; padding-left: 5%;padding-right: 5%;padding-bottom: 5%;">
+                            <md-card-title style="padding-left: 1%;margin-top: -3%;">
                                 <md-card-title-text>
-                                    <span class="md-headline">Plot's Configuration</span>
+                                    <span class="md-headline">Modelo de Interpolação</span>
                                     <!-- <span class="md-subhead">Large</span> -->
                                 </md-card-title-text>
                             </md-card-title>
-                            <md-input-container>
-                                <label>Interpolation Model</label>
-                                <md-select ng-model="interpolation"
+                            <md-input-container style="width: 90%;padding-right: 5%;">
+                                <label>Gráfico I</label>
+                                <md-select ng-model="config.interpolation.g1"
                                            style="min-width: 200px;">
                                     <md-option value="{{interpolation.model}}"
                                                ng-repeat="interpolation in interpolations">
@@ -268,14 +278,47 @@
                                     </md-option>
                                 </md-select>
                             </md-input-container>
+                            <md-input-container style="width: 90%;padding-right: 5%;">
+                                <label>Gráfico II</label>
+                                <md-select ng-model="config.interpolation.g2"
+                                           style="min-width: 200px;">
+                                    <md-option value="{{interpolation.model}}"
+                                               ng-repeat="interpolation in interpolations">
+                                        {{interpolation.model}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container style="width: 90%;padding-right: 5%;">
+                                <label>Gráfico III</label>
+                                <md-select ng-model="config.interpolation.g3"
+                                           style="min-width: 200px;">
+                                    <md-option value="{{interpolation.model}}"
+                                               ng-repeat="interpolation in interpolations">
+                                        {{interpolation.model}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-input-container style="width: 90%;padding-right: 5%;">
+                                <label>Gráfico IV</label>
+                                <md-select ng-model="config.interpolation.g4"
+                                           style="min-width: 200px;">
+                                    <md-option value="{{interpolation.model}}"
+                                               ng-repeat="interpolation in interpolations">
+                                        {{interpolation.model}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                            <md-button ng-click="doIt()" style="width: 50%;" class="md-primary md-raised">Alterar
+                            </md-button>
                         </md-card>
                     </md-grid-tile>
                 </md-grid-list>
             </md-card>
         </md-tab>
         <md-tab label="Planilha de dados">
-            <md-content layout="column" flex ng-controller="dataController">
-                <md-card ng-include="'templates/data-table.html'" style="padding: 2%;height: 85vh;"></md-card>
+            <md-content layout="column" flex ng-controller="dataController" style="background: #fcfcfc;">
+                <md-card ng-include="'templates/data-table.html'"
+                         style="margin: 1%;height: 85vh; overflow: auto;padding: 2% 0 0 1%;"></md-card>
             </md-content>
         </md-tab>
     </md-tabs>

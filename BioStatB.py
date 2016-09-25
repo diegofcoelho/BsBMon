@@ -21,9 +21,12 @@
 
 import binascii
 import os.path
+import random
+import time
 import sqlite3
 import sys
 import webbrowser
+import simplejson
 from multiprocessing import Process
 
 import cherrypy
@@ -126,6 +129,7 @@ class Fake232(object):
                 data.append(ch)
                 temp = MonitorVars(str(binascii.a2b_hex(ch), "ascii"))
                 self.wh.set(temp)
+            time.sleep(random.randrange(150, 300, random.randrange(1, 10, 1)) / 10)
 
 
 class Rs232(object):
@@ -185,7 +189,24 @@ class Root(object):
         # serves our index client page.
 
     @cherrypy.expose
+    @cherrypy.tools.json_out()
+    @cherrypy.tools.json_in()
     def timeSwitch(self):
+        # When this page gets requested, it'll toggle the time feed updating
+        # and return an OK message.
+        if self.timeFeedEnabled:
+            self.timeFeedEnabled = False
+        else:
+            self.timeFeedEnabled = True
+        return "Feed Toggled"
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    @cherrypy.tools.json_in()
+    def log(self):
+        input_json = cherrypy.request.json
+        value = input_json
+        print(value)
         # When this page gets requested, it'll toggle the time feed updating
         # and return an OK message.
         if self.timeFeedEnabled:
@@ -208,7 +229,7 @@ class Root(object):
     @cherrypy.expose
     def feed(self):
         cherrypy.response.headers["Content-Type"] = "text/event-stream;charset=utf-8"
-        return "retry: 60000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
+        return "retry: 30000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
 
     feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
 

@@ -142,7 +142,7 @@ class Rs232(object):
         # Show available ports
         print(ports)
         # Choose Port to be used
-        port = 'COM4'  # single/first serial port
+        port = 'COM3'  # single/first serial port
         # Open ports
         ser = serial.Serial(port,
                             stopbits=serial.STOPBITS_ONE,

@@ -9,6 +9,24 @@ md-tabs {
     border: 1px solid #e1e1e1;
 }
 
+
+.md-headline {
+font-size: 1em;
+}
+
+.md-card > .md-input-container > .label {
+font-size: .5 em;
+}
+
+md-input-container {
+    margin: 5px 0;
+    margin-bottom: 7px;
+    }
+
+md-select {
+font-size: .9em;
+}
+
 @font-face {
     font-family: "Digital7";
     src: url("/fonts/digital-7-mono.ttf");

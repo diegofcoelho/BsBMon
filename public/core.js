@@ -1,3 +1,4 @@
+//http://codepen.io/chaosmail/pen/xZgPmp/
 angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md.data.table', 'n3-line-chart', 'ngRoute'])
 
     .config(['$mdThemingProvider', function ($mdThemingProvider) {
@@ -7,7 +8,6 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             .primaryPalette('blue')
             .accentPalette('pink');
     }])
-
 
     .controller('AppCtrl', function ($timeout, $scope, $mdToast, $mdDialog) {
 
@@ -74,12 +74,32 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             );
         };
 
+        $scope.showConfirm = function (ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            var confirm = $mdDialog.confirm()
+                .title('Deletar dados?')
+                .textContent('Ao confirmar, todos os dados na planilha e gráficos serão deletados.')
+                .ariaLabel('Lucky day')
+                .targetEvent(ev)
+                .ok('Deletar')
+                .cancel('Cancelar');
+
+            $mdDialog.show(confirm).then(function () {
+                $scope.clear();
+                $scope.status = 'You decided to get rid of your debt.';
+            }, function () {
+                $scope.status = 'You decided to keep your debt.';
+            });
+        };
+
         $scope.server = {};
         $scope.server.logger = false;
         $scope.server.project = {};
+        /*
         $scope.server.project.id = 'Project MicroAlgae';
         $scope.server.project.series = 'Series 1';
-        $scope.server.project.user = 'dfcoelho';
+        $scope.server.project.user = '';
+        */
         // http://stackoverflow.com/questions/21574472/angularjs-cant-access-form-object-in-controller-scope
         $scope.trigger = function () {
             var pckg = $scope.server;
@@ -107,6 +127,11 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             });
         };
 
+        $scope.clear = function () {
+            $scope.table = [$scope.data];
+            $scope.gdata.BsBdata = [];
+            $scope.gdata.BsBdata.push(serialify($scope.data));
+        };
 
         $scope.data = {};
         $scope.data.time = "00:00";
@@ -133,11 +158,34 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         $scope.interpolations = null;
         $scope.interpolation = null;
         $scope.config = {};
-        $scope.config.interpolation = {};
-        $scope.config.interpolation.g1 = 'bundle';
-        $scope.config.interpolation.g2 = 'bundle';
-        $scope.config.interpolation.g3 = 'bundle';
-        $scope.config.interpolation.g4 = 'bundle';
+        $scope.config.g1 = {};
+        $scope.config.g1.interpolation = 'bundle';
+        $scope.config.g1.options = {};
+        $scope.config.g1.options.array = [];
+        $scope.config.g1.options.line = true;
+        $scope.config.g1.options.dot = true;
+        $scope.config.g1.options.area = true;
+        $scope.config.g2 = {};
+        $scope.config.g2.interpolation = 'bundle';
+        $scope.config.g2.options = {};
+        $scope.config.g2.options.array = [];
+        $scope.config.g2.options.line = true;
+        $scope.config.g2.options.dot = true;
+        $scope.config.g2.options.area = true;
+        $scope.config.g3 = {};
+        $scope.config.g3.interpolation = 'bundle';
+        $scope.config.g3.options = {};
+        $scope.config.g3.options.array = [];
+        $scope.config.g3.options.line = true;
+        $scope.config.g3.options.dot = true;
+        $scope.config.g3.options.area = true;
+        $scope.config.g4 = {};
+        $scope.config.g4.interpolation = 'bundle';
+        $scope.config.g4.options = {};
+        $scope.config.g4.options.array = [];
+        $scope.config.g4.options.line = true;
+        $scope.config.g4.options.dot = true;
+        $scope.config.g4.options.area = true;
 
         // to ignore sidenav closed state on page load
 
@@ -145,6 +193,27 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             value: 50,
             width: 350,
             height: 350
+        };
+
+
+        $scope.plotOptions = function (n) {
+            var objs = {1: "g1", 2: "g2", 3: "g3", 4: "g4"};
+            var opts = {1: "line", 2: "dot", 3: "area"};
+            var graphs = {1: "graph_options_1", 2: "graph_options_2", 3: "graph_options_3", 4: "graph_options_4"};
+            $scope.config[objs[n]].options.array = [];
+            for (var i = 1; i <= 3; i++) {
+                if ($scope.config[objs[n]].options[opts[i]]) {
+                    $scope.config[objs[n]].options.array.push(opts[i]);
+                }
+            }
+            if ($scope.config[objs[n]].options.array.length == 0) {
+                $scope.config[objs[n]].options.array.push('line');
+                $scope.config[objs[n]].options.line = true;
+
+            }
+            $scope[graphs[n]].series.forEach(function (element, index, array) {
+                element.type = $scope.config[objs[n]].options.array;
+            });
         };
 
         $scope.interpolations = [
@@ -167,10 +236,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_1",
                     label: "Rotação",
                     interpolation: {
-                        mode: $scope.config.interpolation.g1
+                        mode: $scope.config.g1.interpolation
                     },
                     color: "hsla(0,100%,50%, 0.8)",
-                    type: ["line"],
+                    type: $scope.config.g1.options.array,
                     id: "RotSeries"
                 },
                 {
@@ -179,10 +248,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_5",
                     label: "Nível",
                     interpolation: {
-                        mode: $scope.config.interpolation.g1
+                        mode: $scope.config.g1.interpolation
                     },
                     color: "hsla(88, 48%, 48%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g1.options.array,
                     id: "LevelSeries"
                 }
             ],
@@ -209,10 +278,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_2",
                     label: "Temperatura",
                     interpolation: {
-                        mode: $scope.config.interpolation.g2
+                        mode: $scope.config.g2.interpolation
                     },
                     color: "hsla(0,100%,50%, 0.8)",
-                    type: ["line"],
+                    type: $scope.config.g2.options.array,
                     id: "mySeries2"
                 },
                 {
@@ -221,10 +290,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_4",
                     label: "pH",
                     interpolation: {
-                        mode: $scope.config.interpolation.g2
+                        mode: $scope.config.g2.interpolation
                     },
                     color: "hsla(88, 48%, 48%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g2.options.array,
                     id: "mySeries1"
                 }
             ],
@@ -242,10 +311,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_7",
                     label: "Subs1T",
                     interpolation: {
-                        mode: $scope.config.interpolation.g3
+                        mode: $scope.config.g3.interpolation
                     },
                     color: "hsla(0,100%,50%, 0.8)",
-                    type: ["line"],
+                    type: $scope.config.g3.options.array,
                     id: "mySeries2"
                 },
                 {
@@ -254,10 +323,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_8",
                     label: "Subs2T",
                     interpolation: {
-                        mode: $scope.config.interpolation.g3
+                        mode: $scope.config.g3.interpolation
                     },
                     color: "hsla(88, 48%, 48%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g3.options.array,
                     id: "mySeries1"
                 },
                 {
@@ -266,10 +335,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_3",
                     label: "Vazão de Ar",
                     interpolation: {
-                        mode: $scope.config.interpolation.g3
+                        mode: $scope.config.g3.interpolation
                     },
                     color: "hsla(204, 100%, 50%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g3.options.array,
                     id: "airflow"
                 }
             ],
@@ -287,10 +356,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_9",
                     label: "Substrate 1",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(0,100%,50%, 0.8)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "subs1"
                 },
                 {
@@ -299,10 +368,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_10",
                     label: "Substrate 2",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(88, 48%, 48%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "subs2"
                 },
                 {
@@ -311,10 +380,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_11",
                     label: "Acid",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(204, 100%, 50%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "acid"
                 },
                 {
@@ -323,10 +392,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_12",
                     label: "Base",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(275, 100%, 50%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "base"
                 },
                 {
@@ -335,10 +404,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_13",
                     label: "Gas Mixture",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(29, 100%, 50%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "gasmx"
                 },
                 {
@@ -347,10 +416,10 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_14",
                     label: "pO2",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(50, 100%, 50%, 1)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "pO2"
                 },
                 {
@@ -359,29 +428,33 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
                     key: "val_5",
                     label: "AFoam",
                     interpolation: {
-                        mode: $scope.config.interpolation.g4
+                        mode: $scope.config.g4.interpolation
                     },
                     color: "hsla(240,100%,25%, 0.8)",
-                    type: ["line"],
+                    type: $scope.config.g4.options.array,
                     id: "aFoam"
                 }
             ],
             axes: {x: {key: "x", type: "date"}}
         };
 
-        $scope.doIt = function () {
-            //noinspection JSUnusedLocalSymbols,JSUnusedLocalSymbols
+
+        [1, 2, 3, 4].forEach($scope.plotOptions);
+
+        $scope.changeModel = function () {
             function GraphOptions(element, index, array) {
                 element.interpolation.mode = String(this);
                 //console.log("a[" + index + "] = " + element + this);
             }
 
-            $scope.graph_options_1.series.forEach(GraphOptions, $scope.config.interpolation.g1);
-            $scope.graph_options_2.series.forEach(GraphOptions, $scope.config.interpolation.g2);
-            $scope.graph_options_3.series.forEach(GraphOptions, $scope.config.interpolation.g3);
-            $scope.graph_options_4.series.forEach(GraphOptions, $scope.config.interpolation.g4);
-            $scope.selectedIndex = 1;
-            $scope.showToast("Interpolation Model updated.");
+            $scope.graph_options_1.series.forEach(GraphOptions, $scope.config.g1.interpolation);
+            $scope.graph_options_2.series.forEach(GraphOptions, $scope.config.g2.interpolation);
+            $scope.graph_options_3.series.forEach(GraphOptions, $scope.config.g3.interpolation);
+            $scope.graph_options_4.series.forEach(GraphOptions, $scope.config.g4.interpolation);
+            $scope.showToast("Interpolation Model updated.")
+            setTimeout(function () {
+                $scope.selectedIndex = 1;
+            }, 1000);
         };
 
         $scope.gdata = {

@@ -688,11 +688,11 @@ var n3Charts;
                 // replace each others' listeners, but is a timestamp really unique ?
                 var id = new Date().getTime();
                 d3.select(window).on('mouseup.' + id, function () {
-                    d3.event.preventDefault();
+                    // (<Event>d3.event).preventDefault();
                     _this.trigger('window-mouseup');
                 });
                 d3.select(window).on('mousemove.' + id, function () {
-                    d3.event.preventDefault();
+                    // (<Event>d3.event).preventDefault();
                     _this.trigger('window-mousemove');
                 });
                 // Support chaining
@@ -1963,6 +1963,10 @@ var n3Charts;
                         .call(this.yAxis.tickSize(-dim.innerWidth, 0));
                 }
             };
+            Grid.prototype._updateVisibility = function (options) {
+                this.svg.select('.x-grid').style('display', options.grid.x ? null : 'none');
+                this.svg.select('.y-grid').style('display', options.grid.y ? null : 'none');
+            };
             Grid.prototype.update = function (data, options) {
                 var container = this.factoryMgr.get('container');
                 var dim = container.getDimensions();
@@ -1982,6 +1986,7 @@ var n3Charts;
                         .call(this.factoryMgr.getBoundFunction('transitions', 'edit'))
                         .call(this.yAxis.tickSize(-dim.innerWidth, 0));
                 }
+                this._updateVisibility(options);
             };
             Grid.prototype.destroy = function () {
                 this.svg.remove();
@@ -2565,6 +2570,7 @@ var n3Charts;
                     };
                     var updatePoint = function (s) {
                         s.attr({
+                            r: function (d) { return dotsRadius; },
                             cx: function (d) { return xAxis.scale(d.x); },
                             cy: function (d) { return yAxis.scale(d.y1); }
                         })

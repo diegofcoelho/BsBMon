@@ -22,8 +22,8 @@
     <script src="/public/solid-gauge.js"></script>
     <script type="text/javascript" src="/public/md-data-table.js"></script>
     <script type="text/javascript" src="/public/core.js"></script>
-    <script src="public/d3.min.js"></script>
-    <script src="public/LineChart.js"></script>
+    <script src="../public/d3.min.js"></script>
+    <script src="../public/LineChart.js"></script>
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic'
           rel='stylesheet' type='text/css'>
@@ -32,6 +32,8 @@
     <link href="/public/md-data-table.css" rel="stylesheet" type="text/css"/>
     <link href="/public/table.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/public/LineChart.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 
 <body layout="column" ng-app="MyApp">
@@ -42,6 +44,7 @@
          ng-init="dialog.show = true; dialog.msg='oi'; dialog.text='oi'">
     </div>
     -->
+    {% raw %}
     <md-tabs md-dynamic-height="" md-border-bottom="" md-selected="selectedIndex">
         <md-tab label="Dashboard">
             <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1.15:1"
@@ -195,7 +198,7 @@
             </md-grid-list>
         </md-tab>
         <md-tab label="Monitoramento Online" layout="column" id="MonTab">
-            <md-card style="margin: 1%;padding: 1%;height: 85vh; overflow: auto;">
+            <md-card style="margin: 1%;padding: 1%;height: 84vh; overflow: auto;">
                 <md-grid-list md-cols-xs="2" md-cols-sm="1" md-cols-md="1" md-cols-gt-md="2" md-row-height-gt-md="2.6:1"
                               md-row-height-gt-xs="2.5:1"
                               md-row-height="1:1" md-gutter="5vh" md-gutter-gt-sm="5vh">
@@ -215,15 +218,15 @@
             </md-card>
         </md-tab>
         <md-tab label="Configurações">
-            <md-card style="margin: 1%;height: 85vh; overflow: auto;padding: 2% 0 0 1%;">
+            <md-card style="margin: 1%;height: 84vh; overflow: auto;padding: 2% 0 0 1%;">
                 <md-grid-list md-cols-xs="2" md-cols-sm="2" md-cols-md="2" md-cols-gt-md="4" md-row-height-gt-md="1.2:1"
                               md-row-height="1:1" md-gutter="2vh" md-gutter-gt-sm="2vh">
                     <md-grid-tile>
-                        <md-card style="height:100%; width: 100%; padding: 5%;" layout="column"
+                        <md-card style="height:95%; width: 100%; padding: 5%;" layout="column"
                                  layout-align="space-between space-between">
                             <span class="md-headline">Info. do Experimento</span>
                             <div style="height: 80%;" layout="column" id="swd"
-                                 layout-align="center space-between">
+                                 layout-align="space-between space-between">
                                 <div layout-gt-sm="row">
                                     <md-input-container class="md-block" style="margin: 0 0 5% 0;">
                                         <label>User ID</label>
@@ -249,66 +252,182 @@
                                         <div ng-message="required">This is required.</div>
                                     </div>
                                 </md-input-container>
-                                <br>
-                                <md-switch
-                                        ng-disabled="server.project.id == undefined || server.project.user == undefined || server.project.series == undefined"
-                                        ng-model='server.logger' aria-label="Switch 1" style="margin: 0 5% 0 0;"
-                                        ng-change="trigger()">
-                                    Gravar dados
-                                </md-switch>
+                                <div layout="row" layout-align="space-between space-between">
+                                    <md-switch
+                                            ng-disabled="server.project.id == undefined || server.project.user == undefined || server.project.series == undefined"
+                                            ng-model='server.logger' aria-label="Switch 1" style="margin: 0 5% 0 0;"
+                                            ng-change="trigger()">
+                                        Gravar dados
+                                    </md-switch>
+                                    <!--
+                                    <md-button ng-click="changeModel()" style="width: 50%;margin:0;"
+                                               class="md-primary md-raised">
+                                        Salvar
+                                    </md-button>
+                                    -->
+                                </div>
                             </div>
                         </md-card>
                     </md-grid-tile>
                     <md-grid-tile md-rowspan="1" md-colspan="1">
-                        <md-card layout="column" layout-align="space-between end"
-                                 style="height:100%; width: 100%; padding-left: 5%;padding-right: 5%;padding-bottom: 5%;">
+                        <div style="width: 100%;height:100%;" layout="column"
+                             layout-align="space-between space-between">
+                            <md-card layout="column" layout-align="space-between end"
+                                     style="height:50%; width: 100%;">
+                                <md-card-title>
+                                    <span class="md-headline">Gráfico I</span>
 
-                                    <span class="md-headline">Modelo de Interpolação</span>
+                                </md-card-title>
+                                <md-input-container style="width: 90%;padding-right: 5%;">
+                                    <label>Interpolação</label>
+                                    <md-select ng-model="config.g1.interpolation" ng-change="changeModel()"
+                                               style="min-width: 200px;">
+                                        <md-option value="{{interpolation.model}}"
+                                                   ng-repeat="interpolation in interpolations">
+                                            {{interpolation.model}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                <div layout="row" layout-align="space-between center"
+                                     style="width: 90%; margin-right: 5%;">
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g1.options.line"
+                                                     ng-change="plotOptions(1)"
+                                                     aria-label="Graph1 - Linha"></md-checkbox>
+                                        <span>Linhas</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g1.options.dot"
+                                                     ng-change="plotOptions(1)"
+                                                     aria-label="Graph1 - Pontos"></md-checkbox>
+                                        <span>Pontos</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g1.options.area"
+                                                     ng-change="plotOptions(1)"
+                                                     aria-label="Graph1 - Area"></md-checkbox>
+                                        <span>Área</span>
+                                    </div>
+                                </div>
+                            </md-card>
+                            <md-card layout="column" layout-align="space-between end"
+                                     style="height:50%; width: 100%;">
+                                <md-card-title>
+                                    <span class="md-headline">Gráfico II</span>
+                                </md-card-title>
+                                <md-input-container style="width: 90%;padding-right: 5%;">
+                                    <label>Interpolação</label>
+                                    <md-select ng-model="config.g2.interpolation" ng-change="changeModel()"
+                                               style="min-width: 200px;">
+                                        <md-option value="{{interpolation.model}}"
+                                                   ng-repeat="interpolation in interpolations">
+                                            {{interpolation.model}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                <div layout="row" layout-align="space-between center"
+                                     style="width: 90%; margin-right: 5%;">
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g2.options.line"
+                                                     ng-change="plotOptions(2)"
+                                                     aria-label="Graph2 - Linhas"></md-checkbox>
+                                        <span>Linhas</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g2.options.dot"
+                                                     ng-change="plotOptions(2)"
+                                                     aria-label="Graph2 - Pontos"></md-checkbox>
+                                        <span>Pontos</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g2.options.area"
+                                                     ng-change="plotOptions(2)"
+                                                     aria-label="Graph2 - Area"></md-checkbox>
+                                        <span>Área</span>
+                                    </div>
+                                </div>
+                            </md-card>
+                        </div>
+                    </md-grid-tile>
+                    <md-grid-tile md-rowspan="1" md-colspan="1">
+                        <div style="width: 100%;height:100%;" layout="column"
+                             layout-align="space-between space-between">
+                            <md-card layout="column" layout-align="space-between end"
+                                     style="height:50%; width: 100%;">
+                                <md-card-title>
+                                    <span class="md-headline">Gráfico III</span>
 
-                            </md-card-title>
-                            <md-input-container style="width: 90%;padding-right: 5%;">
-                                <label>Gráfico I</label>
-                                <md-select ng-model="config.interpolation.g1"
-                                           style="min-width: 200px;">
-                                    <md-option value="{{interpolation.model}}"
-                                               ng-repeat="interpolation in interpolations">
-                                        {{interpolation.model}}
-                                    </md-option>
-                                </md-select>
-                            </md-input-container>
-                            <md-input-container style="width: 90%;padding-right: 5%;">
-                                <label>Gráfico II</label>
-                                <md-select ng-model="config.interpolation.g2"
-                                           style="min-width: 200px;">
-                                    <md-option value="{{interpolation.model}}"
-                                               ng-repeat="interpolation in interpolations">
-                                        {{interpolation.model}}
-                                    </md-option>
-                                </md-select>
-                            </md-input-container>
-                            <md-input-container style="width: 90%;padding-right: 5%;">
-                                <label>Gráfico III</label>
-                                <md-select ng-model="config.interpolation.g3"
-                                           style="min-width: 200px;">
-                                    <md-option value="{{interpolation.model}}"
-                                               ng-repeat="interpolation in interpolations">
-                                        {{interpolation.model}}
-                                    </md-option>
-                                </md-select>
-                            </md-input-container>
-                            <md-input-container style="width: 90%;padding-right: 5%;">
-                                <label>Gráfico IV</label>
-                                <md-select ng-model="config.interpolation.g4"
-                                           style="min-width: 200px;">
-                                    <md-option value="{{interpolation.model}}"
-                                               ng-repeat="interpolation in interpolations">
-                                        {{interpolation.model}}
-                                    </md-option>
-                                </md-select>
-                            </md-input-container>
-                            <md-button ng-click="doIt()" style="width: 50%;margin:0;" class="md-primary md-raised">Alterar
-                            </md-button>
-                        </md-card>
+                                </md-card-title>
+                                <md-input-container style="width: 90%;padding-right: 5%;">
+                                    <label>Interpolação</label>
+                                    <md-select ng-model="config.g3.interpolation" ng-change="changeModel()"
+                                               style="min-width: 200px;">
+                                        <md-option value="{{interpolation.model}}"
+                                                   ng-repeat="interpolation in interpolations">
+                                            {{interpolation.model}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                <div layout="row" layout-align="space-between center"
+                                     style="width: 90%; margin-right: 5%;">
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g3.options.line"
+                                                     ng-change="plotOptions(3)"
+                                                     aria-label="Graph3 - Linhas"></md-checkbox>
+                                        <span>Linhas</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g3.options.dot"
+                                                     ng-change="plotOptions(3)"
+                                                     aria-label="Graph3 - Pontos"></md-checkbox>
+                                        <span>Pontos</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g3.options.area"
+                                                     ng-change="plotOptions(3)"
+                                                     aria-label="Graph3 - Area"></md-checkbox>
+                                        <span>Área</span>
+                                    </div>
+                                </div>
+                            </md-card>
+                            <md-card layout="column" layout-align="space-between end"
+                                     style="height:50%; width: 100%;">
+                                <md-card-title>
+                                    <span class="md-headline">Gráfico IV</span>
+                                </md-card-title>
+                                <md-input-container style="width: 90%;padding-right: 5%;">
+                                    <label>Interpolação</label>
+                                    <md-select ng-model="config.g4.interpolation" ng-change="changeModel()"
+                                               style="min-width: 200px;">
+                                        <md-option value="{{interpolation.model}}"
+                                                   ng-repeat="interpolation in interpolations">
+                                            {{interpolation.model}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                                <div layout="row" layout-align="space-between center"
+                                     style="width: 90%; margin-right: 5%;">
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g4.options.line"
+                                                     ng-change="plotOptions(4)"
+                                                     aria-label="Graph4 - Linha"></md-checkbox>
+                                        <span>Linhas</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g4.options.dot"
+                                                     ng-change="plotOptions(4)"
+                                                     aria-label="Graph4 - Pontos"></md-checkbox>
+                                        <span>Pontos</span>
+                                    </div>
+                                    <div>
+                                        <md-checkbox class="md-secondary" ng-model="config.g4.options.area"
+                                                     ng-change="plotOptions(4)"
+                                                     aria-label="Graph4 - Area"></md-checkbox>
+                                        <span>Área</span>
+                                    </div>
+                                </div>
+                            </md-card>
+                        </div>
                     </md-grid-tile>
                 </md-grid-list>
             </md-card>
@@ -316,11 +435,45 @@
         <md-tab label="Planilha de dados">
             <md-content layout="column" flex ng-controller="dataController" style="background: #fcfcfc;">
                 <md-card ng-include="'templates/data-table.html'"
-                         style="margin: 1%;height: 85vh; overflow: auto;padding: 2% 0 0 1%;"></md-card>
+                         style="margin: 1%;height: 84vh; overflow: auto;padding: 2% 0 0 1%;">
+                </md-card>
             </md-content>
         </md-tab>
+        <md-tab label="Gerenciador de Projetos">
+            <md-grid-list md-cols-xs="4" md-cols-sm="4" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1.15:1"
+                          md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">
+                <md-card style="margin: 1%;height: 84vh; overflow: auto;padding: 2% 0 0 1%;">
+
+                </md-card>
+            </md-grid-list>
+        </md-tab>
     </md-tabs>
+    {% endraw %}
+    <div style="position: absolute; right: 1%;bottom: 0.5%;">
+        <md-button class="md-fab md-primary md-mini"
+                   ng-disabled="server.project.id == undefined || server.project.user == undefined || server.project.series == undefined || gdata.BsBdata.length <= 1">
+            <a style="text-decoration: none;color: white;">
+                <i class="material-icons">save</i>
+            </a>
+        </md-button>
+        <md-button class="md-fab md-primary md-mini md-warn" ng-click="showConfirm()"
+                   ng-disabled="gdata.BsBdata.length <= 1">
+            <a style="text-decoration: none;color: white;">
+                <i class="material-icons">delete_forever</i>
+            </a>
+        </md-button>
+        <md-button class="md-fab md-primary md-mini md-warn">
+            <a href="/auth/logout" style="text-decoration: none;color: white;">
+                <i class="material-icons">input</i>
+            </a>
+        </md-button>
+    </div>
     <!-- angular.element($0).parent().scope().data -->
 </div>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+    angular.element("#appScope").scope().server.project = {{ project }};
+    })
+</script>
 </html>

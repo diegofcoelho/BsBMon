@@ -22,18 +22,18 @@
 import binascii
 import os.path
 import random
-import time
 import sqlite3
 import sys
+import time
 import webbrowser
-import simplejson
 from multiprocessing import Process
 
 import cherrypy
 import serial
 import serial.tools.list_ports
+import simplejson
 from cherrypy.lib.static import serve_file
-
+from jinja2 import Environment, FileSystemLoader
 import FakeSerial as Serial
 from auth import AuthController, require
 from auth import member_of
@@ -41,6 +41,12 @@ from auth import member_of
 current_dir = os.path.dirname(os.path.abspath(__file__))
 db = "conf/biostat.db"
 
+wkdir = os.path.abspath(os.path.dirname(__file__))
+# sys.exit(print(wkdir))
+viewLoader = FileSystemLoader(os.path.join(wkdir, "templates"))
+env = Environment(loader=viewLoader)
+
+project = {}
 
 class RestrictedArea:
     # all methods in this controller (and subcontrollers) is
@@ -123,7 +129,7 @@ class Fake232(object):
                     for x in data:
                         s += '%02X' % ord(x)
                     # print('%s [len = %d]' % (s, len(data)))
-                    print(str(binascii.a2b_hex(s), "ascii"))
+                    # print(str(binascii.a2b_hex(s), "ascii"))
                 data = []
             else:
                 data.append(ch)
@@ -179,12 +185,16 @@ class Root(object):
 
     timeFeedEnabled = True
 
-    #@require()
+    @require()
     @cherrypy.expose
     def index(self):
         # cherrypy.session.clear()
         # cherrypy.session.load()
-        return serve_file(os.path.join(current_dir, 'BioStatBMD.html'), content_type='text/html')
+        project['user']=cherrypy.request.login
+        #
+        tmpl = env.get_template("BioStatBMD.html")
+        return tmpl.render(project=project)
+        # return serve_file(os.path.join(current_dir, 'BioStatBMD.html'), content_type='text/html')
         # return serve_file(os.path.join(current_dir, 'index.html'), content_type='text/html')
         # serves our index client page.
 
@@ -206,7 +216,7 @@ class Root(object):
     def log(self):
         input_json = cherrypy.request.json
         value = input_json
-        print(value)
+        # print(value)
         # When this page gets requested, it'll toggle the time feed updating
         # and return an OK message.
         if self.timeFeedEnabled:
@@ -246,7 +256,7 @@ def MonitorVars(i):
                     keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
                             "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow"]  # , "FLHOEIMV"]
                     values = i.replace(" ", "").split("|")
-                    print(values, len(values))
+                    # print(values, len(values))
                     for e in keys:
                         res[e] = values[keys.index(e)]
                     return str(res)

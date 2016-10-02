@@ -9,22 +9,20 @@ md-tabs {
     border: 1px solid #e1e1e1;
 }
 
-
 .md-headline {
-font-size: 1em;
+    font-size: 1em;
 }
 
 .md-card > .md-input-container > .label {
-font-size: .5 em;
+    font-size: 0.5em;
 }
 
 md-input-container {
-    margin: 5px 0;
-    margin-bottom: 7px;
-    }
+    margin: 5px 0 7px;
+}
 
 md-select {
-font-size: .9em;
+    font-size: .9em;
 }
 
 @font-face {
@@ -32,12 +30,16 @@ font-size: .9em;
     src: url("/fonts/digital-7-mono.ttf");
 }
 
+button i {
+    display: block !important;
+}
+
 .monitors {
     font-family: Digital7, monospace;
     font-size: 5em;
 }
 
-#tab-content-0, #tab-content-1, #tab-content-2, #tab-content-3 {
+#tab-content-0, #tab-content-1, #tab-content-2, #tab-content-3, #tab-content-4 {
     background: #fcfcfc;
 }
 

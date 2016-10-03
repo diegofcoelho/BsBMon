@@ -112,6 +112,11 @@ class WareHouse:
             conn.close()
             return ans
 
+    @staticmethod
+    def container(data):
+        with open('data_container.bbm', 'w') as file_:
+            file_.write(str(data))
+
 
 class Fake232(object):
     def __init__(self):
@@ -141,6 +146,7 @@ class Fake232(object):
 class Rs232(object):
     def __init__(self):
         self.wh = WareHouse()
+        self.raw = []
 
     def run(self):
         # Get list with all available prots
@@ -167,6 +173,8 @@ class Rs232(object):
                     for x in data:
                         s += '%02X' % ord(x)
                     # print('%s [len = %d]' % (s, len(data)))
+                    self.raw.append(s)
+                    self.wh.container(self.raw)
                     temp = monitor_vars(str(binascii.a2b_hex(s), "ascii"))
                     if temp is not None and temp != "None":
                         self.wh.set(temp)

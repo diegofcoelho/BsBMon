@@ -1,69 +1,77 @@
 <md-table-container>
-  <table data-md-table data-md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" data-ng-model="selected" md-progress="promise">
-    <!-- <thead md-head md-order="query.order">
-      <tr md-row>
-        <th md-column ng-repeat="column in columns" md-numeric="column.numeric" md-order-by="{{column.orderBy}}">
-          <span>{{column.name}}</span>
-          <span ng-if="column.unit">({{column.unit}})</span>
-        </th>
-      </tr>
-    </thead> -->
-    <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
-      <tr md-row>
-        <th md-column data-md-order-by="stime"><span>Hora</span></th>
-        <th md-column data-md-order-by="temp"><span>Temp</span></th>
-        <th md-column data-md-numeric data-md-order-by="rotation" data-md-desc><span>Rotação</span></th>
-        <th md-column data-md-numeric data-md-order-by="ph"><span>pH</span></th>
-        <th md-column data-md-numeric data-md-order-by="po2"><span>pO2</span></th>
-        <th md-column data-md-numeric data-md-order-by="acid" data-hide-sm><span>Ácido</span></th>
-        <th md-column data-md-numeric data-md-order-by="base" data-hide-sm><span>Base</span></th>
-        <th md-column data-md-numeric data-md-order-by="afoam" data-hide-sm><span>Espuma</span></th>
-        <th md-column data-md-numeric data-md-order-by="level" data-hide-sm><span>Nível</span></th>
-        <th md-column data-md-numeric data-md-order-by="subs1t" data-hide-sm><span>SUB1T</span></th>
-        <th md-column data-md-numeric data-md-order-by="subs1" data-hide-sm><span>SUBS1 (%)</span></th>
-        <th md-column data-md-numeric data-md-order-by="subs2t" data-hide-sm><span>SUB2T</span></th>
-        <th md-column data-md-numeric data-md-order-by="subs2" data-hide-sm><span>SUBS2</span></th>
-        <th md-column data-md-numeric data-md-order-by="gasmx" data-hide-sm><span>GASMX</span></th>
-        <th md-column data-md-numeric data-md-order-by="airflow" data-hide-sm><span>Fluxo de ar</span></th>
-      </tr>
-      <tr md-row >
-        <th md-column><span></span>(HH:MM)</th>
-        <th md-column><span></span>(°C)</th>
-        <th md-column data-md-numeric><span>(rpm)</span></th>
-        <th md-column data-md-numeric><span></span></th>
-        <th md-column data-md-numeric><span>(%)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(%)</span></th>
-        <th md-column data-md-numeric><span>(mL)</span></th>
-        <th md-column data-md-numeric><span>(%)</span></th>
-        <th md-column data-md-numeric><span>(%)</span></th>
-        <th md-column data-md-numeric><span>(l/m)</span></th>
-      </tr>
-    </thead>
-    <tbody md-body>
-      <tr md-row md-select="datastream" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" data-ng-repeat="datastream in table | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit">
-        <td md-cell>{{datastream.stime}}</td>
-        <td md-cell>{{datastream.temp}}</td>
-        <td md-cell>{{datastream.rotation}}</td>
-        <td md-cell>{{datastream.ph}}</td>
-        <td md-cell>{{datastream.po2}}</td>
-        <td md-cell>{{datastream.acid}}</td>
-        <td md-cell>{{datastream.base}}</td>
-        <td md-cell>{{datastream.afoam}}</td>
-        <td md-cell>{{datastream.level}}</td>
-        <td md-cell>{{datastream.subs1t}}</td>
-        <td md-cell>{{datastream.subs1}}</td>
-        <td md-cell>{{datastream.subs2t}}%</td>
-        <td md-cell>{{datastream.subs2}}%</td>
-        <td md-cell hide-sm>{{datastream.gasmx}}%</td>
-        <td md-cell hide-sm>{{datastream.airflow}}%</td>
-      </tr>
-    </tbody>
-  </table>
+    <table data-md-table data-md-row-select="options.rowSelection" multiple="{{options.multiSelect}}"
+           data-ng-model="selected" md-progress="promise">
+        <!-- <thead md-head md-order="query.order">
+          <tr md-row>
+            <th md-column ng-repeat="column in columns" md-numeric="column.numeric" md-order-by="{{column.orderBy}}">
+              <span>{{column.name}}</span>
+              <span ng-if="column.unit">({{column.unit}})</span>
+            </th>
+          </tr>
+        </thead> -->
+        <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
+        <tr md-row>
+            <th md-column data-md-order-by="stime"><span>Hora</span></th>
+            <th md-column data-md-order-by="temp"><span>Temp</span></th>
+            <th md-column data-md-numeric data-md-order-by="rotation" data-md-desc><span>Rotação</span></th>
+            <th md-column data-md-numeric data-md-order-by="ph"><span>pH</span></th>
+            <th md-column data-md-numeric data-md-order-by="po2"><span>pO2</span></th>
+            <th md-column data-md-numeric data-md-order-by="acid" data-hide-sm><span>Ácido</span></th>
+            <th md-column data-md-numeric data-md-order-by="base" data-hide-sm><span>Base</span></th>
+            <th md-column data-md-numeric data-md-order-by="afoam" data-hide-sm><span>Espuma</span></th>
+            <th md-column data-md-numeric data-md-order-by="level" data-hide-sm><span>Nível</span></th>
+            <th md-column data-md-numeric data-md-order-by="subs1t" data-hide-sm><span>SUB1T</span></th>
+            <th md-column data-md-numeric data-md-order-by="subs1" data-hide-sm><span>SUBS1 (%)</span></th>
+            <th md-column data-md-numeric data-md-order-by="subs2t" data-hide-sm><span>SUB2T</span></th>
+            <th md-column data-md-numeric data-md-order-by="subs2" data-hide-sm><span>SUBS2</span></th>
+            <th md-column data-md-numeric data-md-order-by="gasmx" data-hide-sm><span>GASMX</span></th>
+            <th md-column data-md-numeric data-md-order-by="airflow" data-hide-sm><span>Fluxo de ar</span></th>
+            <th md-column data-md-numeric data-md-order-by="lux" data-hide-sm><span>Luminosidade</span></th>
+        </tr>
+        <tr md-row>
+            <th md-column><span></span>(HH:MM)</th>
+            <th md-column><span></span>(°C)</th>
+            <th md-column data-md-numeric><span>(rpm)</span></th>
+            <th md-column data-md-numeric><span></span></th>
+            <th md-column data-md-numeric><span>(%)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(%)</span></th>
+            <th md-column data-md-numeric><span>(mL)</span></th>
+            <th md-column data-md-numeric><span>(%)</span></th>
+            <th md-column data-md-numeric><span>(%)</span></th>
+            <th md-column data-md-numeric><span>(l/m)</span></th>
+            <th md-column data-md-numeric><span>(lux)</span></th>
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row md-select="datastream" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect"
+            x-md-auto-select="options.autoSelect"
+            data-ng-repeat="datastream in table | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit">
+            <td md-cell>{{datastream.stime}}</td>
+            <td md-cell>{{datastream.temp}}</td>
+            <td md-cell>{{datastream.rotation}}</td>
+            <td md-cell>{{datastream.ph}}</td>
+            <td md-cell>{{datastream.po2}}</td>
+            <td md-cell>{{datastream.acid}}</td>
+            <td md-cell>{{datastream.base}}</td>
+            <td md-cell>{{datastream.afoam}}</td>
+            <td md-cell>{{datastream.level}}</td>
+            <td md-cell>{{datastream.subs1t}}</td>
+            <td md-cell>{{datastream.subs1}}</td>
+            <td md-cell>{{datastream.subs2t}}%</td>
+            <td md-cell>{{datastream.subs2}}%</td>
+            <td md-cell hide-sm>{{datastream.gasmx}}%</td>
+            <td md-cell hide-sm>{{datastream.airflow}}%</td>
+            <td md-cell hide-sm>{{datastream.lux}}%</td>
+        </tr>
+        </tbody>
+    </table>
 </md-table-container>
 
-<data-md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{tcount}}" md-on-paginate="onPaginate" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"></data-md-table-pagination>
+<data-md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{tcount}}" md-on-paginate="onPaginate"
+                          md-page-select="options.pageSelect"
+                          md-boundary-links="options.boundaryLinks"></data-md-table-pagination>

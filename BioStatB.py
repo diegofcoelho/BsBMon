@@ -31,9 +31,8 @@ from multiprocessing import Process
 import cherrypy
 import serial
 import serial.tools.list_ports
-import simplejson
-from cherrypy.lib.static import serve_file
 from jinja2 import Environment, FileSystemLoader
+
 import FakeSerial as Serial
 from auth import AuthController, require
 from auth import member_of
@@ -47,6 +46,7 @@ viewLoader = FileSystemLoader(os.path.join(wkdir, "templates"))
 env = Environment(loader=viewLoader)
 
 project = {}
+
 
 class RestrictedArea:
     # all methods in this controller (and subcontrollers) is
@@ -65,7 +65,7 @@ class WareHouse:
     def __init__(self):
         self.code = "{'time': '7:41', 'level': '0', 'subs2': '0', 'subs2t': '0.0', 'afoam': '0', 'subs1': '0.0', " \
                     "'temp': '26.1', 'rotation': '0', 'airflow': '0.00', 'base': '0', 'po2': '0.0', 'subs1t': '0', " \
-                    "'ph': '7.34', 'acid': '0', 'gasmx': '0.0'}"
+                    "'ph': '7.34', 'acid': '0', 'gasmx': '0.0', 'FLHOEIMV': '0.0', 'lux': '0.0'}"
         if os.path.isfile(db):
             self.conn = sqlite3.connect(db)
             self.cursor = self.conn.cursor()
@@ -128,12 +128,12 @@ class Fake232(object):
                     s = ''
                     for x in data:
                         s += '%02X' % ord(x)
-                    # print('%s [len = %d]' % (s, len(data)))
-                    # print(str(binascii.a2b_hex(s), "ascii"))
+                        # print('%s [len = %d]' % (s, len(data)))
+                        # print(str(binascii.a2b_hex(s), "ascii"))
                 data = []
             else:
                 data.append(ch)
-                temp = MonitorVars(str(binascii.a2b_hex(ch), "ascii"))
+                temp = monitor_vars(str(binascii.a2b_hex(ch), "ascii").replace('\r\n', ''))
                 self.wh.set(temp)
             time.sleep(random.randrange(150, 300, random.randrange(1, 10, 1)) / 10)
 
@@ -167,7 +167,7 @@ class Rs232(object):
                     for x in data:
                         s += '%02X' % ord(x)
                     # print('%s [len = %d]' % (s, len(data)))
-                    temp = MonitorVars(str(binascii.a2b_hex(s), "ascii"))
+                    temp = monitor_vars(str(binascii.a2b_hex(s), "ascii"))
                     if temp is not None and temp != "None":
                         self.wh.set(temp)
                 data = []
@@ -190,7 +190,7 @@ class Root(object):
     def index(self):
         # cherrypy.session.clear()
         # cherrypy.session.load()
-        project['user']=cherrypy.request.login
+        project['user'] = cherrypy.request.login
         #
         tmpl = env.get_template("BioStatBMD.html")
         return tmpl.render(project=project)
@@ -201,7 +201,7 @@ class Root(object):
     @cherrypy.expose
     @cherrypy.tools.json_out()
     @cherrypy.tools.json_in()
-    def timeSwitch(self):
+    def time_switch(self):
         # When this page gets requested, it'll toggle the time feed updating
         # and return an OK message.
         if self.timeFeedEnabled:
@@ -226,7 +226,7 @@ class Root(object):
         return "Feed Toggled"
 
     @cherrypy.expose
-    def sendTime(self):
+    def send_time(self):
         # Set the expected headers...
         cherrypy.response.headers["Content-Type"] = "text/event-stream"
         if self.timeFeedEnabled:
@@ -244,21 +244,26 @@ class Root(object):
     feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
 
 
-def MonitorVars(i):
-    res = {}
+def monitor_vars(i):
+    keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
+            "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow", "FLHOEIMV", "lux"]
+    res = dict.fromkeys(keys, '0.00')
     # print(i)
+    #
     if i is not None and i != "None":
         if all(s in i for s in ["|", "."]) and "-" not in i:
-            # print(i)
+            #
             j = i.split("\n")
             for k in j:
                 if "|" in k:
-                    keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
-                            "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow"]  # , "FLHOEIMV"]
                     values = i.replace(" ", "").split("|")
-                    # print(values, len(values))
+                    # TODO ADD LUX VALUE
+                    values.append('0.0')
+                    #
                     for e in keys:
                         res[e] = values[keys.index(e)]
+                        if res[e] == '000':
+                            res[e] = '0.0'
                     return str(res)
                 else:
                     alert_msg = k

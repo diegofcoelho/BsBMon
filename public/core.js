@@ -152,6 +152,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
         $scope.data.gasmx = 0;
         $scope.data.airflow = 0;
         $scope.data.flhoeimv = 0;
+        $scope.data.flux = 0;
 
         $scope.table = [];
         $scope.tcount = 0;
@@ -636,7 +637,8 @@ function serialify(data) {
         val_11: parseFloat(data.acid),
         val_12: parseFloat(data.base),
         val_13: parseFloat(data.gasmx),
-        val_14: parseFloat(data.po2)
+        val_14: parseFloat(data.po2),
+        val_15: parseFloat(data.lux)
     };
 }
 

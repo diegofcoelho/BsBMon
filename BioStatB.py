@@ -46,6 +46,7 @@ viewLoader = FileSystemLoader(os.path.join(wkdir, "templates"))
 env = Environment(loader=viewLoader)
 
 project = {}
+raw = []
 
 
 class RestrictedArea:
@@ -112,10 +113,10 @@ class WareHouse:
             conn.close()
             return ans
 
-    @staticmethod
-    def container(data):
-        with open('data_container.bbm', 'w') as file_:
-            file_.write(str(data))
+
+def container(data):
+    with open('data_container.bbm', 'w') as file_:
+        file_.write(str(data))
 
 
 class Fake232(object):
@@ -146,7 +147,6 @@ class Fake232(object):
 class Rs232(object):
     def __init__(self):
         self.wh = WareHouse()
-        self.raw = []
 
     def run(self):
         # Get list with all available prots
@@ -173,8 +173,6 @@ class Rs232(object):
                     for x in data:
                         s += '%02X' % ord(x)
                     # print('%s [len = %d]' % (s, len(data)))
-                    self.raw.append(s)
-                    self.wh.container(self.raw)
                     temp = monitor_vars(str(binascii.a2b_hex(s), "ascii"))
                     if temp is not None and temp != "None":
                         self.wh.set(temp)
@@ -264,7 +262,9 @@ def monitor_vars(i):
     keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
             "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow", "FLHOEIMV", "lux"]
     res = dict.fromkeys(keys, '0.00')
-    print(i)
+    #
+    raw.append(str(binascii.b2a_hex(bytes(i, "ascii")), "ascii"))
+    container(raw)
     #
     if i is not None and i != "None":
         if all(s in i for s in ["|", "."]) and "-" not in i:

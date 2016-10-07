@@ -18,7 +18,7 @@
 # http://jtblin.github.io/angular-chart.js/
 # https://github.com/n3-charts/line-chart/wiki/Options
 ####################################################################################################
-
+import ast
 import binascii
 import os.path
 import random
@@ -73,7 +73,7 @@ class WareHouse:
             self.conn = sqlite3.connect(db)
             self.cursor = self.conn.cursor()
             self.cursor.execute("CREATE TABLE runtime (data);")
-            a = 'INSERT INTO runtime VALUES ("%s");' % self.code
+            a = 'INSERT INTO runtime VALUES ("{}");'.format(self.code)
             self.cursor.execute(a)
             self.conn.commit()
             self.get()
@@ -82,7 +82,7 @@ class WareHouse:
     def set(run_vars):
         conn = sqlite3.connect(db)
         cursor = conn.cursor()
-        sql = 'UPDATE runtime SET data = "%s"' % run_vars
+        sql = 'UPDATE runtime SET data = "{}"'.format(run_vars)
         cursor.execute(sql)
         conn.commit()
         conn.close()
@@ -188,10 +188,11 @@ class Root(object):
     wh = WareHouse()
     auth = AuthController()
     restricted = RestrictedArea()
+    project = {}
+    logger = False
+
     # global USERS
     # USERS = {u[0]: u[1] for u in wh.generic("select `user`, `pwd` FROM `users`")}
-
-    timeFeedEnabled = True
 
     @require()
     @cherrypy.expose
@@ -199,6 +200,8 @@ class Root(object):
         # cherrypy.session.clear()
         # cherrypy.session.load()
         project['user'] = cherrypy.request.login
+        project['id'] = 'Project MicroAlgae'
+        project['series'] = 'Series 1'
         #
         tmpl = env.get_template("BioStatBMD.html")
         return tmpl.render(project=project)
@@ -223,31 +226,36 @@ class Root(object):
     @cherrypy.tools.json_in()
     def log(self):
         input_json = cherrypy.request.json
-        value = input_json
-        # print(value)
-        # When this page gets requested, it'll toggle the time feed updating
-        # and return an OK message.
-        if self.timeFeedEnabled:
-            self.timeFeedEnabled = False
-        else:
-            self.timeFeedEnabled = True
-        return "Feed Toggled"
-
-    @cherrypy.expose
-    def send_time(self):
-        # Set the expected headers...
-        cherrypy.response.headers["Content-Type"] = "text/event-stream"
-        if self.timeFeedEnabled:
-            # angular.element($0).parent().scope().data
-            # return "event: time\n" + "data: " + self.Example4() + "\n\n;"
-            return "event: time\n" + "data: " + self.wh.get() + "\n\n;"
-        else:
-            pass
+        self.logger = input_json['logger']
+        self.project = input_json['project']
+        return "Data now is being collected."
 
     @cherrypy.expose
     def feed(self):
         cherrypy.response.headers["Content-Type"] = "text/event-stream;charset=utf-8"
-        return "retry: 30000\nevent: time\n" + "data: " + self.wh.get() + "\n\n;"
+        data = self.wh.get()
+        data_dict = ast.literal_eval(data)
+        if self.logger:
+            #
+            date = time.strftime('%Y-%m-%d %H:%M:%S')
+            #
+            data_dict['date'] = str(date)
+            data_dict['user'] = self.project["user"]
+            data_dict['project'] = self.project["id"]
+            data_dict['series'] = self.project["series"]
+            #
+            fields = [f for f in data_dict.keys() if f not in ['time']]
+            #
+            fields_s = ', '.join(fields)
+            values = ['"{}"'.format(data_dict[g]) for g in fields]
+            values_s = ', '.join(values)
+            # print(fields_s, values_s)
+            sql = 'INSERT INTO data ({}) VALUES ({});'.format(fields_s, values_s)
+            # stat = self.wh.generic(sql)
+            #
+            #
+            #
+        return "retry: 30000\nevent: time\n" + "data: " + data + "\n\n;"
 
     feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
 
@@ -256,7 +264,7 @@ def monitor_vars(i):
     keys = ["time", "temp", "rotation", "ph", "po2", "acid", "base", "afoam", "level",
             "subs1t", "subs1", "subs2", "subs2t", "gasmx", "airflow", "FLHOEIMV", "lux"]
     res = dict.fromkeys(keys, '0.00')
-    # print(i)
+    print(i)
     #
     if i is not None and i != "None":
         if all(s in i for s in ["|", "."]) and "-" not in i:

@@ -247,7 +247,7 @@
                                 </div>
                                 <md-input-container class="md-block" style="margin: 0 5% 0 0;">
                                     <label>Project ID</label>
-                                    <input required="" name="projectID" ng-model="server.project.id" title="">
+                                    <input required="" name="projectID" ng-model="server.project.id" title="" ng-disabled='server.logger'>
                                     <div ng-messages="server.project.id.$error">
                                         <div ng-message="required">This is required.</div>
                                     </div>

@@ -245,9 +245,19 @@
                                         </div>
                                     </md-input-container>
                                 </div>
+                                    <md-input-container class="md-block" style="margin: 0 5% 0 0;">
+                                    <label>Project ID</label>
+                                        <md-select ng-model="server.project.id" title=""
+                                           ng-disabled='server.logger' ng-required="">
+                                            <md-option ng-repeat="proj in projects" ng-value="proj">
+                                                {{proj}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
                                 <md-input-container class="md-block" style="margin: 0 5% 0 0;">
                                     <label>Project ID</label>
-                                    <input required="" name="projectID" ng-model="server.project.id" title="" ng-disabled='server.logger'>
+                                    <input required="" name="projectID" ng-model="server.project.id" title=""
+                                           ng-disabled='server.logger'>
                                     <div ng-messages="server.project.id.$error">
                                         <div ng-message="required">This is required.</div>
                                     </div>
@@ -463,6 +473,7 @@
             </a>
         </md-button>
         <md-button class="md-fab md-primary md-mini md-warn">
+            <!--suppress HtmlUnknownTarget -->
             <a href="/auth/logout" style="text-decoration: none;color: white;">
                 <i class="material-icons">input</i>
             </a>
@@ -471,9 +482,15 @@
     <!-- angular.element($0).parent().scope().data -->
 </div>
 </body>
+<!--suppress BadExpressionStatementJS, UnterminatedStatementJS, JSUnnecessarySemicolon -->
 <script type="text/javascript">
-    $(document).ready(function(){
-    angular.element("#appScope").scope().server.project = {{ project }};
-    })
+    //noinspection JSUnnecessarySemicolon
+    $(document).ready(function () {
+        //noinspection JSUnnecessarySemicolon
+        angular.element("#appScope").scope().server.project = {{ project }};
+        //noinspection JSUnnecessarySemicolon
+        angular.element("#appScope").scope().server.udata = {{ udata }};
+        angular.element("#appScope").scope().projects = Object.keys(angular.element("#appScope").scope().server.udata['data']);
+    });
 </script>
 </html>

@@ -7,13 +7,31 @@
       <w>chng</w>
       <w>colorhsla</w>
       <w>configurações</w>
+      <w>dados</w>
+      <w>dialogdemo</w>
+      <w>endraw</w>
+      <w>experimento</w>
       <w>ftime</w>
       <w>gasmx</w>
+      <w>gerenciador</w>
+      <w>googleapis</w>
+      <w>gravar</w>
+      <w>gráfico</w>
+      <w>interpolação</w>
+      <w>linha</w>
+      <w>linhas</w>
       <w>logi</w>
       <w>maxlength</w>
+      <w>monitoramento</w>
       <w>nível</w>
       <w>pckg</w>
+      <w>planilha</w>
+      <w>pontos</w>
+      <w>proj</w>
+      <w>projetos</w>
+      <w>roboto</w>
       <w>rotação</w>
+      <w>salvar</w>
       <w>serialify</w>
       <w>serie</w>
       <w>stime</w>
@@ -22,6 +40,7 @@
       <w>theming</w>
       <w>titlemsg</w>
       <w>vazão</w>
+      <w>área</w>
     </words>
   </dictionary>
 </component>

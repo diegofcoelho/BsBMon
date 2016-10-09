@@ -11,9 +11,9 @@
     <script src="/public/angular.min.js"></script>
     <script src="/public/angular-animate.min.js"></script>
     <script src="/public/angular-aria.min.js"></script>
+    <script src="/public/angular-messages.min.js"></script>
     <script src="/public/angular-material.js"></script>
     <script src="/public/angular-route.min.js"></script>
-    <script src="/public/angular-messages.min.js"></script>
     <script type="text/javascript" src="/public/gauge.js"></script>
     <script type="text/javascript" src="/public/angular-canvas-gauge.js"></script>
     <script type="text/javascript" src="/public/PercentageGauge.js"></script>
@@ -227,44 +227,40 @@
                             <span class="md-headline">Info. do Experimento</span>
                             <div style="height: 80%;" layout="column" id="swd"
                                  layout-align="space-between space-between">
-                                <div layout-gt-sm="row">
-                                    <md-input-container class="md-block" style="margin: 0 0 5% 0;">
-                                        <label>User ID</label>
-                                        <input required="" name="userID" ng-model="server.project.user" title=""
-                                               disabled>
-                                        <div ng-messages="server.project.user.$error">
-                                            <div ng-message="required">This is required.</div>
-                                        </div>
-                                    </md-input-container>
-                                    <md-input-container class="md-block" style="margin: 0 0 5% 0;">
-                                        <label>Series ID</label>
-                                        <input required="" name="seriesID" ng-model="server.project.series" title=""
-                                               disabled>
-                                        <div ng-messages="server.project.series.$error">
-                                            <div ng-message="required">This is required.</div>
-                                        </div>
-                                    </md-input-container>
-                                </div>
-                                    <md-input-container class="md-block" style="margin: 0 5% 0 0;">
-                                    <label>Project ID</label>
+                                <md-input-container class="md-block" style="margin: 0 0 0 0;">
+                                    <label>User ID</label>
+                                    <input required="" name="userID" ng-model="server.project.user" title=""
+                                           disabled>
+                                    <div ng-messages="server.project.user.$error">
+                                        <div ng-message="required">This is required.</div>
+                                    </div>
+                                </md-input-container>
+                                <div layout="row" style="margin: 0 0 0 0;">
+                                    <md-input-container class="md-block" style="width: 90%;">
+                                        <label>Project ID</label>
                                         <md-select ng-model="server.project.id" title=""
-                                           ng-disabled='server.logger' ng-required="">
+                                                   ng-disabled='server.logger' required="" ng-change="getSeries();">
+                                            <md-option><em></em></md-option>
                                             <md-option ng-repeat="proj in projects" ng-value="proj">
                                                 {{proj}}
                                             </md-option>
                                         </md-select>
                                     </md-input-container>
-                                <md-input-container class="md-block" style="margin: 0 5% 0 0;">
-                                    <label>Project ID</label>
-                                    <input required="" name="projectID" ng-model="server.project.id" title=""
-                                           ng-disabled='server.logger'>
-                                    <div ng-messages="server.project.id.$error">
+                                    <md-button class="md-icon-button md-primary" ng-click="showPrompt($event);">
+                                        <i class="material-icons">add_box</i>
+                                    </md-button>
+                                </div>
+                                <md-input-container class="md-block" style="margin: 0 0 0 0;">
+                                    <label>Series ID</label>
+                                    <input required="" name="seriesID" ng-model="server.project.series" title=""
+                                           ng-disabled="server.project.id==undefined || server.project.id == '' || server.project.id == ' '">
+                                    <div ng-messages="server.project.series.$error">
                                         <div ng-message="required">This is required.</div>
                                     </div>
                                 </md-input-container>
                                 <div layout="row" layout-align="space-between space-between">
                                     <md-switch
-                                            ng-disabled="server.project.id == undefined || server.project.user == undefined || server.project.series == undefined"
+                                            ng-disabled="server.project.id == undefined || server.project.id == ' ' || server.project.user == undefined || server.project.series == undefined"
                                             ng-model='server.logger' aria-label="Switch 1" style="margin: 0 5% 0 0;"
                                             ng-change="trigger()">
                                         Gravar dados
@@ -483,6 +479,7 @@
 </div>
 </body>
 <!--suppress BadExpressionStatementJS, UnterminatedStatementJS, JSUnnecessarySemicolon -->
+<!-- @formatter:off -->
 <script type="text/javascript">
     //noinspection JSUnnecessarySemicolon
     $(document).ready(function () {
@@ -493,4 +490,5 @@
         angular.element("#appScope").scope().projects = Object.keys(angular.element("#appScope").scope().server.udata['data']);
     });
 </script>
+<!-- @formatter:on -->
 </html>

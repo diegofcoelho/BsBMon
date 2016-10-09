@@ -11,6 +11,7 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
 
     .controller('AppCtrl', function ($timeout, $scope, $mdToast, $mdDialog) {
 
+        $scope.status = '  ';
         var last = {
             bottom: false,
             top: true,
@@ -92,14 +93,52 @@ angular.module('MyApp', ['ngMaterial', 'ngMessages', 'angular-canvas-gauge', 'md
             });
         };
 
+
         $scope.server = {};
         $scope.server.logger = false;
         $scope.server.project = {};
         /*
-        $scope.server.project.id = 'Project MicroAlgae';
-        $scope.server.project.series = 'Series 1';
-        $scope.server.project.user = '';
-        */
+         $scope.server.project.id = 'Project MicroAlgae';
+         $scope.server.project.series = 'Series 1';
+         $scope.server.project.user = '';
+         */
+        $scope.getSeries = function () {
+            try {
+                var series_length = Object.keys($scope.server.udata['data'][$scope.server.project.id]).length;
+                $scope.server.project.series = 'Series ' + (series_length + 1 );
+            }
+            catch (err) {
+                if ($scope.server.project.id == '' || $scope.server.project.id == ' '|| $scope.server.project.id == undefined) {
+                    $scope.server.project.series = undefined;
+                } else {
+                    $scope.server.project.series = 'Series 1';
+                }
+            }
+        };
+
+        $scope.showPrompt = function (ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            var confirm;
+            confirm = $mdDialog.prompt()
+                .title('Create a new Project')
+                .textContent('Choose a name for your new Project:')
+                .placeholder('Project\'s name')
+                .ariaLabel('Project\'s name')
+                .targetEvent(ev)
+                .ok('Okay!')
+                .cancel('Cancelar');
+            if ($scope.projects) {
+                confirm.initialValue('Project ' + ($scope.projects.length + 1));
+            }
+            $mdDialog.show(confirm).then(function (result) {
+                $scope.projects.push(result);
+                $scope.server.project.id = result;
+                $scope.getSeries();
+                $scope.status = 'You decided to name your dog ' + result + '.';
+            }, function () {
+                $scope.status = 'You didn\'t name your dog.';
+            });
+        };
         // http://stackoverflow.com/questions/21574472/angularjs-cant-access-form-object-in-controller-scope
         $scope.trigger = function () {
             var pckg = $scope.server;

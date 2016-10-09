@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb5ee96a-bb78-428f-b547-5063830c6ec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/data_container.bbm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/angular-feeds.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/angular-feeds.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/biostat.db" afterPath="$PROJECT_DIR$/conf/biostat.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/biostat.iml" afterPath="$PROJECT_DIR$/.idea/biostat.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/2a65ed00-7750-488e-ae92-b74a98ba2c06.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/2a65ed00-7750-488e-ae92-b74a98ba2c06.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/dfcoelho.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/dfcoelho.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BioStatB.py" afterPath="$PROJECT_DIR$/BioStatB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_container.bbm" afterPath="$PROJECT_DIR$/data_container.bbm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular-material.js" afterPath="$PROJECT_DIR$/public/angular-material.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/angular-material.min.js" afterPath="$PROJECT_DIR$/public/angular-material.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/core.js" afterPath="$PROJECT_DIR$/public/core.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/BioStatBMD.html" afterPath="$PROJECT_DIR$/templates/BioStatBMD.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,7 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1476019097286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BsBMon$BioStatB.coverage" NAME="BioStatB Coverage Results" MODIFIED="1476046235347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -73,18 +74,18 @@
       <file leaf-file-name="BioStatB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BioStatB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="225" column="10" selection-start-line="225" selection-start-column="10" selection-end-line="225" selection-end-column="10" />
+            <state relative-caret-position="531">
+              <caret line="232" column="9" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
               <folding>
                 <element signature="e#1243#1253#0" expanded="true" />
-                <marker date="1476019097220" expanded="true" signature="2809:2836" ph="CREATE TABLE... runtime" />
-                <marker date="1476019097220" expanded="true" signature="2857:2890" ph="INSERT INTO runtime... " />
-                <marker date="1476019097220" expanded="true" signature="3123:3153" ph="UPDATE runti... " />
-                <marker date="1476019097220" expanded="true" signature="3358:3379" ph="SELECT * FRO... runtime" />
-                <marker date="1476019097220" expanded="true" signature="6433:6491" ph="SELECT * FRO... projects" />
-                <marker date="1476019097220" expanded="true" signature="6433:6495" ph="SELECT id, F... projects" />
-                <marker date="1476019097220" expanded="true" signature="6635:6671" ph="SELECT * FRO... data" />
-                <marker date="1476019097220" expanded="true" signature="9350:9383" ph="INSERT INTO data... " />
+                <marker date="1476046233605" expanded="true" signature="2809:2836" ph="CREATE TABLE... runtime" />
+                <marker date="1476046233605" expanded="true" signature="2857:2890" ph="INSERT INTO runtime... " />
+                <marker date="1476046233605" expanded="true" signature="3123:3153" ph="UPDATE runti... " />
+                <marker date="1476046233605" expanded="true" signature="3358:3379" ph="SELECT * FRO... runtime" />
+                <marker date="1476046233605" expanded="true" signature="6433:6491" ph="SELECT * FRO... projects" />
+                <marker date="1476046233605" expanded="true" signature="6433:6495" ph="SELECT id, F... projects" />
+                <marker date="1476046233605" expanded="true" signature="6712:6730" ph="SELECT * FRO... data" />
+                <marker date="1476046233605" expanded="true" signature="9562:9595" ph="INSERT INTO data... " />
               </folding>
             </state>
           </provider>
@@ -93,22 +94,31 @@
       <file leaf-file-name="BioStatBMD.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/BioStatBMD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="250" column="84" selection-start-line="250" selection-start-column="84" selection-end-line="250" selection-end-column="84" />
+            <state relative-caret-position="-1550">
+              <caret line="246" column="52" selection-start-line="246" selection-start-column="52" selection-end-line="246" selection-end-column="52" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FakeSerial.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FakeSerial.py">
+      <file leaf-file-name="core.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="533">
+              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+              <folding>
+                <element signature="e#231#377#0" expanded="false" />
+                <element signature="e#726#965#0" expanded="false" />
+                <element signature="e#1423#1827#0" expanded="false" />
+                <element signature="e#2060#2675#0" expanded="false" />
+                <element signature="n#!!block;n#serialify#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,7 +126,7 @@
       <file leaf-file-name="data-table.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/data-table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="17">
               <caret line="13" column="61" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="61" />
               <folding />
             </state>
@@ -170,9 +180,9 @@
         <option value="$PROJECT_DIR$/templates/data-table.html" />
         <option value="$PROJECT_DIR$/auth.py" />
         <option value="$PROJECT_DIR$/FakeSerial.py" />
-        <option value="$PROJECT_DIR$/public/core.js" />
         <option value="$PROJECT_DIR$/data_container.bbm" />
         <option value="$PROJECT_DIR$/BioStatB.py" />
+        <option value="$PROJECT_DIR$/public/core.js" />
         <option value="$PROJECT_DIR$/templates/BioStatBMD.html" />
       </list>
     </option>
@@ -264,6 +274,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BsBMon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BsBMon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -276,21 +300,21 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BioStatB.py" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\BsBMon\dev" />
-      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon" />
-      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\templates" />
-      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\public" />
-      <recent name="E:\BsBMon\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\dev" />
       <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\public" />
+      <recent name="E:\BsBMon\dev" />
+      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon" />
+      <recent name="C:\Users\dfcoelho\OneDrive\Pesquisa\PostDoc\PNPD\BsBMon\templates" />
+      <recent name="E:\BsBMon\public" />
     </key>
   </component>
   <component name="RunManager" selected="Python.BioStatB">
@@ -553,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475368632068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="20161009">
+      <created>1476019504392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1476019504392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -571,7 +602,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2611051" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -605,7 +636,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="20161001" />
-    <option name="LAST_COMMIT_MESSAGE" value="20161001" />
+    <MESSAGE value="20161009" />
+    <option name="LAST_COMMIT_MESSAGE" value="20161009" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -618,38 +650,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/BioStatBMD.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/PercentageGauge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BioStatB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1243#1253#0" expanded="true" />
-            <marker date="1476019097220" expanded="true" signature="2809:2836" ph="CREATE TABLE... runtime" />
-            <marker date="1476019097220" expanded="true" signature="2857:2890" ph="INSERT INTO runtime... " />
-            <marker date="1476019097220" expanded="true" signature="3123:3153" ph="UPDATE runti... " />
-            <marker date="1476019097220" expanded="true" signature="3358:3379" ph="SELECT * FRO... runtime" />
-            <marker date="1476019097220" expanded="true" signature="6433:6491" ph="SELECT * FRO... projects" />
-            <marker date="1476019097220" expanded="true" signature="6433:6495" ph="SELECT id, F... projects" />
-            <marker date="1476019097220" expanded="true" signature="6635:6671" ph="SELECT * FRO... data" />
-            <marker date="1476019097220" expanded="true" signature="9350:9383" ph="INSERT INTO data... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35-32/Lib/site-packages/cherrypy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -830,14 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/data-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2a65ed00-7750-488e-ae92-b74a98ba2c06/console.sql" />
     <entry file="file://$PROJECT_DIR$/dev/data_container2.bbm">
       <provider selected="true" editor-type-id="text-editor">
@@ -853,22 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FakeSerial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/data_container.bbm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -876,30 +852,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular-touch.min.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="92" column="372" selection-start-line="92" selection-start-column="368" selection-end-line="92" selection-end-column="372" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/angular-material.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="869" column="43" selection-start-line="869" selection-start-column="39" selection-end-line="869" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FakeSerial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BioStatB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="225" column="10" selection-start-line="225" selection-start-column="10" selection-end-line="225" selection-end-column="10" />
+        <state relative-caret-position="531">
+          <caret line="232" column="9" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
           <folding>
             <element signature="e#1243#1253#0" expanded="true" />
-            <marker date="1476019097220" expanded="true" signature="2809:2836" ph="CREATE TABLE... runtime" />
-            <marker date="1476019097220" expanded="true" signature="2857:2890" ph="INSERT INTO runtime... " />
-            <marker date="1476019097220" expanded="true" signature="3123:3153" ph="UPDATE runti... " />
-            <marker date="1476019097220" expanded="true" signature="3358:3379" ph="SELECT * FRO... runtime" />
-            <marker date="1476019097220" expanded="true" signature="6433:6491" ph="SELECT * FRO... projects" />
-            <marker date="1476019097220" expanded="true" signature="6433:6495" ph="SELECT id, F... projects" />
-            <marker date="1476019097220" expanded="true" signature="6635:6671" ph="SELECT * FRO... data" />
-            <marker date="1476019097220" expanded="true" signature="9350:9383" ph="INSERT INTO data... " />
+            <marker date="1476046233605" expanded="true" signature="2809:2836" ph="CREATE TABLE... runtime" />
+            <marker date="1476046233605" expanded="true" signature="2857:2890" ph="INSERT INTO runtime... " />
+            <marker date="1476046233605" expanded="true" signature="3123:3153" ph="UPDATE runti... " />
+            <marker date="1476046233605" expanded="true" signature="3358:3379" ph="SELECT * FRO... runtime" />
+            <marker date="1476046233605" expanded="true" signature="6433:6491" ph="SELECT * FRO... projects" />
+            <marker date="1476046233605" expanded="true" signature="6433:6495" ph="SELECT id, F... projects" />
+            <marker date="1476046233605" expanded="true" signature="6712:6730" ph="SELECT * FRO... data" />
+            <marker date="1476046233605" expanded="true" signature="9562:9595" ph="INSERT INTO data... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/data-table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
+          <folding>
+            <element signature="e#231#377#0" expanded="false" />
+            <element signature="e#726#965#0" expanded="false" />
+            <element signature="e#1423#1827#0" expanded="false" />
+            <element signature="e#2060#2675#0" expanded="false" />
+            <element signature="n#!!block;n#serialify#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/BioStatBMD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="250" column="84" selection-start-line="250" selection-start-column="84" selection-end-line="250" selection-end-column="84" />
+        <state relative-caret-position="-1550">
+          <caret line="246" column="52" selection-start-line="246" selection-start-column="52" selection-end-line="246" selection-end-column="52" />
           <folding>
+            <element signature="n#style#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-input-container#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-input-container#0;n#div#0;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#md-input-container#1;n#div#0;n#md-card#0;n#md-grid-tile#0;n#md-grid-list#0;n#md-card#0;n#md-tab#2;n#md-tabs#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>

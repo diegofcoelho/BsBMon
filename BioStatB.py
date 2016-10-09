@@ -197,13 +197,17 @@ class Root(object):
         ans = {}
         #
         sql_pns = 'SELECT `index`, `id`, `series` FROM projects WHERE user = "{}"'.format(user)
-        ans_pns = {i[0]: {i[1]: i[2]} for i in self.wh.generic(sql_pns)}
+        res_1 = self.wh.generic(sql_pns)
+        ans_pns = {i[0]: {i[1]: i[2]} for i in res_1}
+        user_projects = list(set(i[1] for i in res_1))
         #
         ans_data = {}
-        sql_data = 'SELECT * FROM data WHERE user = "{}"'.format(user)
-        res = self.wh.generic(sql_data)
+        sql_data = 'SELECT * FROM data'
+        res_2 = self.wh.generic(sql_data)
+        res = [r for r in res_2 if r[2] in user_projects]
         res_projects = [i[2] for i in res]
         res_series = [i[3] for i in res]
+        #
         for i in res_projects:
             ans_data[i] = {}
             for j in res_series:
@@ -225,7 +229,8 @@ class Root(object):
         #
         # project['id'] = 'Project MicroAlgae'
         # series come as a suggestion based on the number of series for each project
-        project['series'] = 'Series Sample'
+        # project['series'] = 'Series {}'.format(
+        #    len([list(set(i.values()))[0] for i in user_data['projects'].values()]) + 1)
         #
         tmpl = env.get_template("BioStatBMD.html")
         return tmpl.render(project=project, udata=user_data)

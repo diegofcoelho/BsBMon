@@ -192,17 +192,48 @@ class Root(object):
     # global USERS
     # USERS = {u[0]: u[1] for u in wh.generic("select `user`, `pwd` FROM `users`")}
 
+    def user_content(self, user):
+        #
+        ans = {}
+        #
+        sql_pns = 'SELECT `index`, `id`, `series` FROM projects WHERE user = "{}"'.format(user)
+        res_1 = self.wh.generic(sql_pns)
+        ans_pns = {i[0]: {i[1]: i[2]} for i in res_1}
+        user_projects = list(set(i[1] for i in res_1))
+        #
+        ans_data = {}
+        sql_data = 'SELECT * FROM data'
+        res_2 = self.wh.generic(sql_data)
+        res = [r for r in res_2 if r[2] in user_projects]
+        res_projects = [i[2] for i in res]
+        res_series = [i[3] for i in res]
+        #
+        for i in res_projects:
+            ans_data[i] = {}
+            for j in res_series:
+                ans_data[i][j] = {k[0]: k[4:len(k)] for k in res if j == k[3]}
+        #
+        ans['projects'] = ans_pns
+        ans['data'] = ans_data
+        return ans
+        #
+
     @require()
     @cherrypy.expose
     def index(self):
         # cherrypy.session.clear()
         # cherrypy.session.load()
         project['user'] = cherrypy.request.login
-        project['id'] = 'Project MicroAlgae'
-        project['series'] = 'Series 1'
+        #
+        user_data = self.user_content(project['user'])
+        #
+        # project['id'] = 'Project MicroAlgae'
+        # series come as a suggestion based on the number of series for each project
+        # project['series'] = 'Series {}'.format(
+        #    len([list(set(i.values()))[0] for i in user_data['projects'].values()]) + 1)
         #
         tmpl = env.get_template("BioStatBMD.html")
-        return tmpl.render(project=project)
+        return tmpl.render(project=project, udata=user_data)
         # return serve_file(os.path.join(current_dir, 'BioStatBMD.html'), content_type='text/html')
         # return serve_file(os.path.join(current_dir, 'index.html'), content_type='text/html')
         # serves our index client page.
@@ -249,10 +280,12 @@ class Root(object):
             values_s = ', '.join(values)
             # print(fields_s, values_s)
             sql = 'INSERT INTO data ({}) VALUES ({});'.format(fields_s, values_s)
-            # stat = self.wh.generic(sql)
+            stat = self.wh.generic(sql)
             #
             #
             #
+        else:
+            pass
         return "retry: 30000\nevent: time\n" + "data: " + data + "\n\n;"
 
     feed._cp_config = {'response.stream': True, 'tools.encode.encoding': 'utf-8'}
